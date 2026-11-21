@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.DS_Store
+.ipynb_checkpoints/
+# raw responses are committed compressed (results/raw/*.jsonl.gz), not as plain jsonl
+results/raw/*.jsonl
+report/*.aux
+report/*.log
+report/*.out
+report/*.synctex.gz
