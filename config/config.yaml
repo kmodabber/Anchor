@@ -3,9 +3,13 @@
 
 experiment:
   name: anchor
-  seed: 3346              # master seed; split and decoy seeds derive from it
+  seed: 3346              # master seed. The seeds below are set equal to it; each feeds
+                          # a separate RNG or hash, so they do not interact.
   split_seed: 3346        # dev/test split (stratified by category)
   decoy_seed: 3346        # decoy prices
+  call_seed: 3346         # base for per-call Ollama seeds: hash(call_seed, market_id, run).
+                          # Same seed in all three conditions, so only the price line differs.
+  bootstrap_seed: 3346    # bootstrap resampling in eval/
   dev_fraction: 0.30
   temperature: 0.7
   max_output_tokens: 16   # Ollama num_predict; answer is a single number
@@ -16,6 +20,7 @@ experiment:
 
 data:
   markets_csv: data/markets.csv
+  split_csv: data/split.csv
   created_after: "2025-01-01"
   snapshot_days_before_resolution: 7
   snapshot_price_min: 0.05
@@ -41,6 +46,15 @@ models:
 ollama:
   host: http://localhost:11434
   version: null           # TODO: fill in from `ollama --version` on both machines
+
+parser:
+  retries: 1                    # one retry on unparseable output, then log a failure
+  max_failure_rate: 0.10        # dev-set cutoff; above this, replace or drop the model
+
+evaluation:
+  anchoring_min_gap_points: 5   # exclude pairs where |shown price - p_blind| < 5 points
+  bootstrap_resamples: 2000
+  ci_level: 0.95
 
 paths:
   raw_responses: results/raw
