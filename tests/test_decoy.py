@@ -40,3 +40,62 @@ def test_different_seed_changes_decoys():
 def test_rejects_percent_input():
     with pytest.raises(ValueError):
         make_decoy("x", 62, seed=1)  # price must be 0-1, not 0-100
+
+
+def test_exact_20_point_gap_allowed_for_every_whole_price():
+    # float noise (0.28 * 100 = 28.000000000000004) used to drop these
+    for c in range(5, 96):
+        cands = decoy_candidates(c / 100)
+        for k in (c - 20, c + 20):
+            if 5 <= k <= 95:
+                assert k in cands, f"price {c}%: {k} should be allowed"
+
+
+def test_duplicate_market_id_rejected():
+    markets = [{"market_id": "123", "snapshot_price": 0.4},
+               {"market_id": "123", "snapshot_price": 0.6}]
+    with pytest.raises(ValueError, match="duplicate market_id"):
+        make_decoys(markets, seed=1)
+
+
+def _write_csv(path, rows):
+    import csv
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=["market_id", "snapshot_price"])
+        w.writeheader()
+        w.writerows(rows)
+
+
+def test_script_header_only_csv_exits_cleanly(tmp_path, capsys):
+    from scripts.make_decoys import main
+    markets = tmp_path / "markets.csv"
+    _write_csv(markets, [])
+    out = tmp_path / "decoys.csv"
+    assert main(markets, out) == 1
+    assert "no market rows" in capsys.readouterr().err
+    assert not out.exists()
+
+
+def test_script_duplicate_ids_exit_cleanly(tmp_path, capsys):
+    from scripts.make_decoys import main
+    markets = tmp_path / "markets.csv"
+    _write_csv(markets, [{"market_id": "a", "snapshot_price": 0.3},
+                         {"market_id": "a", "snapshot_price": 0.7}])
+    out = tmp_path / "decoys.csv"
+    assert main(markets, out) == 1
+    assert "duplicate market_id" in capsys.readouterr().err
+    assert not out.exists()
+
+
+def test_script_writes_decoys(tmp_path):
+    import csv
+    from scripts.make_decoys import main
+    markets = tmp_path / "markets.csv"
+    _write_csv(markets, [{"market_id": "kalshi:A", "snapshot_price": 0.3},
+                         {"market_id": "poly:B", "snapshot_price": 0.7}])
+    out = tmp_path / "decoys.csv"
+    assert main(markets, out) == 0
+    with open(out, newline="", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    assert [r["market_id"] for r in rows] == ["kalshi:A", "poly:B"]
+    assert all(float(r["gap_points"]) >= 20 for r in rows)

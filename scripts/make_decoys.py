@@ -12,11 +12,16 @@ from common.config import REPO_ROOT, load_config
 from pipeline.decoy import make_decoys
 
 
-def main() -> int:
+FIELDS = ["market_id", "snapshot_price", "decoy_price", "gap_points"]
+
+
+def main(markets_path=None, out_path=None) -> int:
+    """The path arguments exist so tests can point at temp files; normal runs
+    take both paths from config.yaml."""
     cfg = load_config()
     d = cfg["decoy"]
-    markets_path = REPO_ROOT / cfg["data"]["markets_csv"]
-    out_path = REPO_ROOT / d["output_csv"]
+    markets_path = markets_path or REPO_ROOT / cfg["data"]["markets_csv"]
+    out_path = out_path or REPO_ROOT / d["output_csv"]
 
     if not markets_path.exists():
         print(f"{markets_path} not found yet (waiting on the data pull).", file=sys.stderr)
@@ -25,12 +30,20 @@ def main() -> int:
     with open(markets_path, newline="", encoding="utf-8") as f:
         markets = list(csv.DictReader(f))
 
-    rows = make_decoys(markets, seed=cfg["experiment"]["decoy_seed"],
-                       low=d["low_points"], high=d["high_points"],
-                       min_gap=d["min_gap_points"])
+    if not markets:
+        print(f"{markets_path} has no market rows; nothing to do.", file=sys.stderr)
+        return 1
+
+    try:
+        rows = make_decoys(markets, seed=cfg["experiment"]["decoy_seed"],
+                           low=d["low_points"], high=d["high_points"],
+                           min_gap=d["min_gap_points"])
+    except ValueError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 1
 
     with open(out_path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        w = csv.DictWriter(f, fieldnames=FIELDS)
         w.writeheader()
         w.writerows(rows)
 
