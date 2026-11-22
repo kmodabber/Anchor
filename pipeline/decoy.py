@@ -22,7 +22,9 @@ def decoy_candidates(real_price: float, low: int = 5, high: int = 95,
     """All allowed decoy values (in percentage points) for a real price in [0, 1]."""
     if not 0.0 <= real_price <= 1.0:
         raise ValueError(f"real_price must be in [0, 1], got {real_price}")
-    real_pts = real_price * 100
+    # Round away float noise: 0.28 * 100 is 28.000000000000004, which would wrongly
+    # put 48 just under the 20-point gap. Prices never carry 6+ decimals in points.
+    real_pts = round(real_price * 100, 6)
     return [k for k in range(low, high + 1) if abs(k - real_pts) >= min_gap]
 
 
@@ -38,7 +40,17 @@ def make_decoy(market_id: str, real_price: float, seed: int, low: int = 5,
 def make_decoys(markets: list[dict], seed: int, low: int = 5, high: int = 95,
                 min_gap: int = 20) -> list[dict]:
     """markets: dicts with 'market_id' and 'snapshot_price' (0-1).
-    Returns rows of market_id, snapshot_price, decoy_price, gap_points."""
+    Returns rows of market_id, snapshot_price, decoy_price, gap_points.
+    Raises ValueError on a repeated market_id: two markets with one ID would share
+    a decoy, and their responses could not be told apart in the logs."""
+    seen: set[str] = set()
+    for m in markets:
+        mid = str(m["market_id"])
+        if mid in seen:
+            raise ValueError(f"duplicate market_id {mid!r}; IDs must be unique "
+                             "across platforms (e.g. prefix with the source)")
+        seen.add(mid)
+
     rows = []
     for m in markets:
         price = float(m["snapshot_price"])
