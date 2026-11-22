@@ -22,7 +22,7 @@ class ModelResponse:
 
 class ModelClient(Protocol):
     def generate(self, *, model: str, prompt: str, seed: int,
-                 temperature: float) -> ModelResponse: ...
+                 temperature: float, max_tokens: int) -> ModelResponse: ...
 
     def digest_for(self, model: str) -> str: ...
 
@@ -62,7 +62,7 @@ class OllamaClient:
         return "unknown"
 
     def generate(self, *, model: str, prompt: str, seed: int,
-                 temperature: float) -> ModelResponse:
+                 temperature: float, max_tokens: int) -> ModelResponse:
         body = {
             "model": model,
             "prompt": prompt,
@@ -70,6 +70,7 @@ class OllamaClient:
             "options": {
                 "seed": seed,
                 "temperature": temperature,
+                "num_predict": max_tokens,  # experiment.max_output_tokens
             },
         }
         resp = self._post("/api/generate", body)
@@ -86,7 +87,9 @@ class FakeClient:
         return f"fake:{model}"
 
     def generate(self, *, model: str, prompt: str, seed: int,
-                 temperature: float) -> ModelResponse:
+                 temperature: float, max_tokens: int) -> ModelResponse:
+        # Seeding random.Random with a str is stable across processes (unlike
+        # hash()), so dry runs are reproducible.
         rng = random.Random(f"{seed}|{model}|{prompt}")
         base = rng.randint(10, 90)
         r = rng.random()

@@ -11,7 +11,9 @@ from typing import Optional
 
 _PCT = re.compile(r"(?<![\d.])(\d{1,3}(?:\.\d+)?)\s*(?:%|percent\b|pct\b)", re.I)
 _FRAC = re.compile(r"(?<![\d])0?\.(\d{1,4})(?!\d)")
-_INT = re.compile(r"(?<![\d.])(\d{1,3})(?!\.?\d)")
+# Bare number, integer or decimal ("65", "65.5"). The lookahead (?!\.?\d) stops
+# "12345" matching as "123", while a sentence-ending "60." still matches 60.
+_NUM = re.compile(r"(?<![\d.])(\d{1,3}(?:\.\d+)?)(?!\.?\d)")
 
 
 def parse_probability(text: str) -> Optional[float]:
@@ -36,9 +38,12 @@ def parse_probability(text: str) -> Optional[float]:
         if 0 <= frac <= 1:
             return round(frac * 100, 4)
 
-    # 3) First bare integer in range.
-    for m in _INT.finditer(s):
+    # 3) First bare number in range. A decimal like "1.0" is skipped: it could
+    #    mean 1% or a probability of 1.0 (100%), so we refuse to guess.
+    for m in _NUM.finditer(s):
         v = float(m.group(1))
+        if "." in m.group(1) and v <= 1:
+            continue
         if 0 <= v <= 100:
             return v
 

@@ -1,7 +1,11 @@
 """Verify Ollama is reachable and the required models are present.
 
 Prints the Ollama version and digest for each required tag. Exits non-zero
-if anything is missing so CI / teammates notice. Does NOT pull models.
+if anything is missing so teammates notice. Does NOT pull models.
+Tags, host and the expected Ollama version come from config/config.yaml.
+
+Run from the repo root:
+    python -m scripts.check_ollama
 """
 from __future__ import annotations
 
@@ -10,14 +14,12 @@ import sys
 import urllib.error
 import urllib.request
 
-REQUIRED_TAGS = [
-    "llama3.2:3b",
-    "llama3.1:8b",
-    "qwen2.5:3b",
-    "qwen2.5:7b",
-]
+from common.config import load_config
 
-OLLAMA_URL = "http://localhost:11434"
+CFG = load_config()
+REQUIRED_TAGS = [m["tag"] for m in CFG["models"]]
+OLLAMA_URL = CFG["ollama"]["host"].rstrip("/")
+EXPECTED_VERSION = CFG["ollama"]["version"]  # null until the team pins one
 
 
 def _get(path: str) -> dict:
@@ -34,6 +36,12 @@ def main() -> int:
         return 2
 
     print(f"Ollama version: {version}")
+    if EXPECTED_VERSION is None:
+        print("  (ollama.version is not pinned in config/config.yaml yet)")
+    elif str(EXPECTED_VERSION) != version:
+        print(f"ERROR: config/config.yaml pins Ollama {EXPECTED_VERSION}; this machine "
+              f"has {version}. Both machines must match.")
+        return 1
 
     try:
         tags = _get("/api/tags").get("models", [])
