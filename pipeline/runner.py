@@ -1,33 +1,28 @@
-"""Pipeline: iterate (market, condition, model, run), call the client,
-parse, retry once on parse failure, log everything as JSONL, resume on
-restart.
+"""Run loop: iterate (model, market, condition, run), call the client, parse,
+retry on parse failure, log everything as JSONL, resume on restart.
+
+All settings come from config/config.yaml via common.config:
+- seeds: common.config.call_seed(cfg, market_id, run), shared by the three
+  conditions so they differ only in the price line
+- decoys: pipeline.decoy.make_decoys with experiment.decoy_seed, the same
+  function and seed that write data/decoys.csv, so one fixed decoy per market
+- every record carries the config hash; a results file is never resumed under
+  a different config
 """
 from __future__ import annotations
 
 import json
-import os
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Iterable
 
-from .config import Config
-from .decoy import decoy_for
+from common.config import call_seed, config_hash
+from .decoy import make_decoys
 from .markets import Market
 from .model_client import ModelClient
 from .parser import parse_probability
 from .prompts import CONDITIONS, render
-
-
-@dataclass
-class CallKey:
-    model: str
-    market_id: str
-    condition: str
-    run: int
-
-    def as_tuple(self) -> tuple[str, str, str, int]:
-        return (self.model, self.market_id, self.condition, self.run)
 
 
 @dataclass
@@ -42,12 +37,14 @@ class RunStats:
         return self.parse_failures / self.calls if self.calls else 0.0
 
 
-def _results_file(results_dir: Path, model: str) -> Path:
+def results_file(results_dir: Path, model: str) -> Path:
     safe = model.replace(":", "_").replace("/", "_")
     return results_dir / f"{safe}.jsonl"
 
 
-def _load_completed(path: Path) -> set[tuple[str, str, int]]:
+def _load_completed(path: Path, current_hash: str) -> set[tuple[str, str, int]]:
+    """Keys already logged in `path`. Raises if any record came from a different
+    config, so one file never mixes two experimental settings."""
     done: set[tuple[str, str, int]] = set()
     if not path.exists():
         return done
@@ -56,8 +53,13 @@ def _load_completed(path: Path) -> set[tuple[str, str, int]]:
             try:
                 rec = json.loads(line)
             except json.JSONDecodeError:
-                continue
-            if rec.get("final_status") == "ok" or rec.get("final_status") == "parse_failure":
+                continue  # half-written last line from an interrupted run
+            if rec.get("config_hash") != current_hash:
+                raise RuntimeError(
+                    f"{path} has records from config {rec.get('config_hash')}, but the "
+                    f"current config is {current_hash}. Move the file aside or use a "
+                    "new results directory; do not mix settings in one file.")
+            if rec.get("final_status") in ("ok", "parse_failure"):
                 done.add((rec["market_id"], rec["condition"], int(rec["run"])))
     return done
 
@@ -68,65 +70,71 @@ def _append(path: Path, record: dict) -> None:
         f.write(json.dumps(record, ensure_ascii=False) + "\n")
 
 
+def decoy_points(cfg: dict, markets: list[Market]) -> dict[str, int]:
+    """market_id -> decoy as a whole percentage. Also rejects duplicate ids."""
+    d = cfg["decoy"]
+    rows = make_decoys(
+        [{"market_id": m.market_id, "snapshot_price": m.snapshot_price} for m in markets],
+        seed=cfg["experiment"]["decoy_seed"],
+        low=d["low_points"], high=d["high_points"], min_gap=d["min_gap_points"])
+    return {r["market_id"]: int(round(r["decoy_price"] * 100)) for r in rows}
+
+
 def run_pipeline(
     *,
-    cfg: Config,
+    cfg: dict,
     client: ModelClient,
     markets: Iterable[Market],
     models: list[str],
+    runs: int,
+    results_dir: Path,
     conditions: tuple[str, ...] = CONDITIONS,
-    runs: int | None = None,
-    results_dir: Path | None = None,
-    precomputed_decoys: dict[str, int] | None = None,
 ) -> dict[str, RunStats]:
-    runs = runs if runs is not None else cfg.runs_per_cell
-    results_dir = results_dir or cfg.path("results_dir")
-    results_dir.mkdir(parents=True, exist_ok=True)
-    precomputed_decoys = precomputed_decoys or {}
-    stats: dict[str, RunStats] = {m: RunStats() for m in models}
+    """models: Ollama tags, e.g. 'llama3.1:8b'."""
+    exp = cfg["experiment"]
+    attempts = 1 + cfg["parser"]["retries"]
+    chash = config_hash(cfg)
     markets = list(markets)
+    decoys = decoy_points(cfg, markets)
+    results_dir.mkdir(parents=True, exist_ok=True)
+    stats: dict[str, RunStats] = {m: RunStats() for m in models}
 
     for model in models:
-        out_path = _results_file(results_dir, model)
-        completed = _load_completed(out_path)
+        out_path = results_file(results_dir, model)
+        completed = _load_completed(out_path, chash)
         digest = client.digest_for(model)
+        if digest == "unknown":
+            raise RuntimeError(f"no digest for {model}: is Ollama running and the model "
+                               "pulled? (python -m scripts.check_ollama)")
         s = stats[model]
 
         for market in markets:
             for condition in conditions:
                 for run in range(runs):
-                    key = (market.market_id, condition, run)
-                    if key in completed:
+                    if (market.market_id, condition, run) in completed:
                         continue
 
-                    seed = cfg.seed_for(market.market_id, condition, model, run)
-                    decoy_price = precomputed_decoys.get(market.market_id)
-                    if condition == "decoy" and decoy_price is None:
-                        decoy_price = decoy_for(
-                            market.market_id,
-                            market.snapshot_price,
-                            seed=seed,
-                            min_distance=cfg.decoy_min_distance,
-                        )
-
+                    seed = call_seed(cfg, market.market_id, run)
                     prompt = render(
                         condition=condition,
                         question=market.question,
                         snapshot_date=market.snapshot_date,
-                        real_price=market.snapshot_price,
-                        decoy_price=decoy_price,
+                        real_price=market.price_points,
+                        decoy_price=decoys[market.market_id],
                     )
 
                     t0 = time.time()
                     retries = 0
                     parsed: float | None = None
                     raw_text = ""
-                    for attempt in range(2):  # one retry on parse failure
+                    for attempt in range(attempts):
                         resp = client.generate(
                             model=model,
                             prompt=prompt.text,
-                            seed=seed + attempt,  # second try: bumped seed
-                            temperature=cfg.temperature,
+                            # a retry needs new randomness; keep it in 31 bits
+                            seed=(seed + attempt) % 2**31,
+                            temperature=exp["temperature"],
+                            max_tokens=exp["max_output_tokens"],
                         )
                         raw_text = resp.raw_text
                         parsed = parse_probability(raw_text)
@@ -144,22 +152,22 @@ def run_pipeline(
                         if len(s.failed_examples) < 5:
                             s.failed_examples.append(raw_text[:200])
 
-                    record = {
+                    _append(out_path, {
                         "model": model,
                         "model_digest": digest,
+                        "config_hash": chash,
                         "market_id": market.market_id,
                         "condition": condition,
                         "run": run,
-                        "seed": seed,
-                        "shown_price": prompt.shown_price,
+                        "seed": seed,               # retry k used (seed + k) % 2**31
+                        "shown_price": prompt.shown_price,  # whole percent, None if blind
                         "prompt": prompt.text,
                         "raw_response": raw_text,
-                        "parsed_probability": parsed,
+                        "parsed_probability": parsed,       # 0-100, None on failure
                         "retry_count": retries,
                         "final_status": final_status,
                         "elapsed_s": round(elapsed, 4),
                         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
-                    }
-                    _append(out_path, record)
+                    })
 
     return stats

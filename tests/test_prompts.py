@@ -1,4 +1,4 @@
-from anchor.prompts import CONDITIONS, render
+from pipeline.prompts import CONDITIONS, render
 
 
 def _common():

@@ -21,6 +21,7 @@ experiment:
 data:
   markets_csv: data/markets.csv
   split_csv: data/split.csv
+  fixture_csv: fixtures/dev_markets.csv   # 10 made-up markets for pipeline tests
   created_after: "2025-01-01"
   snapshot_days_before_resolution: 7
   snapshot_price_min: 0.05
@@ -45,6 +46,7 @@ models:
 
 ollama:
   host: http://localhost:11434
+  request_timeout_s: 120
   version: null           # TODO: fill in from `ollama --version` on both machines
 
 parser:

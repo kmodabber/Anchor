@@ -1,4 +1,4 @@
-from anchor.parser import parse_probability
+from pipeline.parser import parse_probability
 
 
 def test_plain_integer():
@@ -60,3 +60,16 @@ def test_integer_zero():
 
 def test_integer_hundred():
     assert parse_probability("100%") == 100
+
+
+def test_bare_decimal_percent():
+    assert parse_probability("65.5") == 65.5
+
+
+def test_sentence_ending_period():
+    assert parse_probability("I estimate 60.") == 60
+
+
+def test_ambiguous_one_point_zero_is_refused():
+    # "1.0" could be 1% or a probability of 1.0; refuse rather than guess
+    assert parse_probability("1.0") is None

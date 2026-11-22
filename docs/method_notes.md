@@ -2,7 +2,7 @@
 
 These notes freeze the exact prompts, models, and call settings used by
 the pipeline. Prompts are frozen Monday Nov 23; any later change should
-go in as a second named variant in `src/anchor/prompts.py` so old runs
+go in as a second named variant in `pipeline/prompts.py` so old runs
 remain reproducible.
 
 ## Models
@@ -19,16 +19,22 @@ logged per call so the exact model build is recoverable.
 
 ## Call settings
 
-- Temperature: 0.7
-- Runs per cell (market × condition × model): 5
+All values below are read from `config/config.yaml`; this list mirrors it.
+
+- Temperature: 0.7 (`experiment.temperature`)
+- Max output tokens: 16 (`experiment.max_output_tokens`, sent as Ollama `num_predict`)
+- Runs per cell (market × condition × model): 5 main, 2 dev, 3 paraphrase
+  (`experiment.runs`)
 - Every call is a fresh request with no chat history.
-- Seed: deterministic per `(market_id, condition, model, run)`, derived
-  from `seed_base` in `config/config.yaml`. See
-  `anchor.config.Config.seed_for`.
-- A parse failure triggers one retry with a bumped seed. A second
-  failure is logged and counted against the model's failure rate.
-- Models with over 10% parse failures on the dev set are replaced or
-  dropped per group rule.
+- Seed: sha256 of `(experiment.call_seed, market_id, run)`, see
+  `common.config.call_seed`. The condition is left out on purpose, so
+  blind, informed and decoy for the same market and run share a seed and
+  differ only in the price line (common random numbers). The seed is the
+  same on every machine and every Python process.
+- A parse failure triggers one retry (`parser.retries`) with seed + 1. A
+  second failure is logged and counted against the model's failure rate.
+- Models with over 10% parse failures on the dev set
+  (`parser.max_failure_rate`) are replaced or dropped per group rule.
 
 ## Conditions
 
@@ -36,8 +42,13 @@ Three conditions, identical in every way except the price line:
 
 1. **Blind** — no price shown.
 2. **Informed** — the real snapshot price shown.
-3. **Decoy** — a random price shown, at least 20 points from the real
-   one (per `decoy_min_distance`).
+3. **Decoy** — a random whole-percent price in [5, 95], at least 20
+   points from the real one (`decoy` section of the config). Drawn once
+   per market by `pipeline/decoy.py` with `experiment.decoy_seed`, so the
+   same decoy is shown in every run; `data/decoys.csv` records them.
+
+Prices are stored as probabilities from 0 to 1 in `data/markets.csv` and
+shown in prompts as whole percentages (0.72 → 72).
 
 The informed and decoy prompts share **identical wording** for the
 price line. The model is never told whether the price is real or
@@ -66,14 +77,18 @@ market. The `outcome` column is never included in any prompt.
 
 ## Logged fields per call (JSONL)
 
-`model`, `model_digest`, `market_id`, `condition`, `run`, `seed`,
-`shown_price`, `prompt`, `raw_response`, `parsed_probability`,
+`model`, `model_digest`, `config_hash`, `market_id`, `condition`, `run`,
+`seed`, `shown_price` (whole percent, null for blind), `prompt`,
+`raw_response`, `parsed_probability` (0-100, null on failure),
 `retry_count`, `final_status`, `elapsed_s`, `timestamp`.
 
 ## Reproducibility
 
-- Pinned Ollama version and model digests recorded in `SETUP.md` and
-  printed by `scripts/check_ollama.py`.
+- Ollama version pinned in `config/config.yaml` (`ollama.version`) and
+  checked, with model digests, by `python -m scripts.check_ollama`.
 - Deterministic seeds from the shared config.
 - Resumable runs: already-logged `(market_id, condition, run)` tuples
-  are skipped on restart.
+  are skipped on restart. A results file is never resumed under a
+  different config: the run stops if the config hash differs.
+- A run stops if a model's digest cannot be read, so every logged
+  response is tied to a known model build.

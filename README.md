@@ -19,7 +19,8 @@ Team: Talha Chaudhry, Nima Abbasi, Evan Thomas, Aryan Bhasin, Kamyar Modabber.
 | `results/` | raw responses, tables, figures | Aryan, Kamyar |
 | `report/` | IEEE LaTeX source | Talha |
 | `scripts/` | command-line entry points | all |
-| `docs/` | contributions log and meeting notes | Kamyar |
+| `docs/` | contributions log, meeting notes, method notes | Kamyar, Nima |
+| `fixtures/` | 10 made-up markets for testing the pipeline before the real data | Nima |
 
 ## Setup
 
@@ -30,19 +31,25 @@ pip install -r requirements.txt
 pytest -q                        # should pass before any run
 ```
 
-Install [Ollama](https://ollama.com) and pull the models for your machine:
+Install [Ollama](https://ollama.com) and pull the models for your machine
+(full steps in `SETUP.md`):
 
 ```bash
 ollama pull llama3.2:3b && ollama pull llama3.1:8b     # Aryan's RTX 4060
 ollama pull qwen2.5:3b  && ollama pull qwen2.5:7b      # Talha's RTX 5070
-ollama list                                            # copy the digests below
+python -m scripts.check_ollama                         # version + digests; copy them below
 ```
 
 ## Running
 
+All commands run from the repo root.
+
 ```bash
-python -m scripts.make_decoys     # needs data/markets.csv
-# pipeline and eval commands: to be added by Nima and Aryan
+python -m scripts.make_decoys                                   # needs data/markets.csv
+python -m pipeline.cli parser-test --n 10 --fixture --dry-run   # fake model, no Ollama
+python -m pipeline.cli parser-test --n 10                       # real models, dev markets only
+python -m pipeline.cli parser-test --models qwen2.5:3b qwen2.5:7b   # one machine's models
+# eval commands: to be added by Aryan
 ```
 
 ## Reproducibility record

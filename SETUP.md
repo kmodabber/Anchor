@@ -5,7 +5,9 @@ exactly. Do not substitute tags; the digests must match between machines.
 
 ## Pinned versions
 
-- Ollama: **0.4.7** (or newer with the same model digests — verify below)
+- Ollama: **one exact version on both machines**, set in `config/config.yaml`
+  (`ollama.version`) once we confirm a version that supports Talha's RTX 5070.
+  `python -m scripts.check_ollama` fails if a machine does not match.
 - Model tags:
   - `llama3.2:3b`
   - `llama3.1:8b`
@@ -25,7 +27,7 @@ Verify:
 ollama --version
 ```
 
-If the version is older than 0.4.7, upgrade before continuing.
+Install the exact version in `config/config.yaml` (`ollama.version`), not just the latest.
 
 ## 2. Start the Ollama server
 
@@ -46,10 +48,11 @@ ollama pull qwen2.5:7b
 
 ## 4. Verify — run the project's check script
 
-From the repo root:
+From the repo root, with the Python environment from step 5 set up and active
+(the script reads `config/config.yaml`):
 
 ```
-python scripts/check_ollama.py
+python -m scripts.check_ollama
 ```
 
 It prints the Ollama version and the digest for each required model. Paste
