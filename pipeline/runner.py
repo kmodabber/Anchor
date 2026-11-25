@@ -11,11 +11,13 @@ All settings come from config/config.yaml via common.config:
 """
 from __future__ import annotations
 
+import gzip
 import json
+import shutil
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Iterable
+from typing import Callable, Iterable
 
 from common.config import call_seed, config_hash
 from .decoy import make_decoys
@@ -40,6 +42,18 @@ class RunStats:
 def results_file(results_dir: Path, model: str) -> Path:
     safe = model.replace(":", "_").replace("/", "_")
     return results_dir / f"{safe}.jsonl"
+
+
+def compress(path: Path) -> Path:
+    """Write path + '.gz' next to path (which stays, as the resume file).
+    mtime=0 and an empty stored filename make the output byte-identical for
+    identical input, so re-running a finished phase does not show up as a
+    change in git."""
+    dst = path.with_name(path.name + ".gz")
+    with open(path, "rb") as src, open(dst, "wb") as raw:
+        with gzip.GzipFile(filename="", mode="wb", fileobj=raw, mtime=0) as gz:
+            shutil.copyfileobj(src, gz)
+    return dst
 
 
 def _load_completed(path: Path, current_hash: str) -> set[tuple[str, str, int]]:
@@ -88,9 +102,15 @@ def run_pipeline(
     models: list[str],
     runs: int,
     results_dir: Path,
+    phase: str,
+    prompt_variant: str = "v1",
     conditions: tuple[str, ...] = CONDITIONS,
+    progress: Callable[[str], None] | None = None,
+    progress_every: int = 10,
 ) -> dict[str, RunStats]:
-    """models: Ollama tags, e.g. 'llama3.1:8b'."""
+    """models: Ollama tags, e.g. 'llama3.1:8b'. phase: label logged with every
+    record (dev, main, paraphrase, parser_test). progress: called with a status
+    line every `progress_every` markets and at the end of each model."""
     exp = cfg["experiment"]
     attempts = 1 + cfg["parser"]["retries"]
     chash = config_hash(cfg)
@@ -108,7 +128,7 @@ def run_pipeline(
                                "pulled? (python -m scripts.check_ollama)")
         s = stats[model]
 
-        for market in markets:
+        for i, market in enumerate(markets, start=1):
             for condition in conditions:
                 for run in range(runs):
                     if (market.market_id, condition, run) in completed:
@@ -121,6 +141,7 @@ def run_pipeline(
                         snapshot_date=market.snapshot_date,
                         real_price=market.price_points,
                         decoy_price=decoys[market.market_id],
+                        variant=prompt_variant,
                     )
 
                     t0 = time.time()
@@ -156,6 +177,8 @@ def run_pipeline(
                         "model": model,
                         "model_digest": digest,
                         "config_hash": chash,
+                        "phase": phase,
+                        "prompt_variant": prompt_variant,
                         "market_id": market.market_id,
                         "condition": condition,
                         "run": run,
@@ -169,5 +192,9 @@ def run_pipeline(
                         "elapsed_s": round(elapsed, 4),
                         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
                     })
+
+            if progress and (i % progress_every == 0 or i == len(markets)):
+                progress(f"{model}: {i}/{len(markets)} markets, "
+                         f"{s.parse_failures} parse failures so far")
 
     return stats

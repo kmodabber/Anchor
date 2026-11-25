@@ -28,6 +28,15 @@ Probability (0-100):"""
 
 _PRICE_LINE = "Current market price (implied probability, 0-100): {price}"
 
+# Named prompt variants: (base template, price line). "v1" is the frozen main
+# prompt; never edit it. The paraphrase robustness run uses "paraphrase".
+# Talha: add it here as ("<base with {question}, {snapshot_date}, {price_line}>",
+# "<price line with {price}>"). tests/test_prompts.py checks every variant
+# automatically for the same rules as v1.
+TEMPLATES: dict[str, tuple[str, str]] = {
+    "v1": (_BASE, _PRICE_LINE),
+}
+
 
 @dataclass(frozen=True)
 class RenderedPrompt:
@@ -43,9 +52,14 @@ def render(
     snapshot_date: str,
     real_price: int | None,
     decoy_price: int | None,
+    variant: str = "v1",
 ) -> RenderedPrompt:
     if condition not in CONDITIONS:
         raise ValueError(f"unknown condition: {condition}")
+    if variant not in TEMPLATES:
+        raise ValueError(f"prompt variant {variant!r} not defined in pipeline/prompts.py "
+                         f"(have: {sorted(TEMPLATES)})")
+    base, price_tmpl = TEMPLATES[variant]
 
     if condition == "blind":
         price_line = ""
@@ -54,14 +68,14 @@ def render(
         if real_price is None:
             raise ValueError("informed condition requires real_price")
         shown = int(real_price)
-        price_line = _PRICE_LINE.format(price=shown)
+        price_line = price_tmpl.format(price=shown)
     else:  # decoy
         if decoy_price is None:
             raise ValueError("decoy condition requires decoy_price")
         shown = int(decoy_price)
-        price_line = _PRICE_LINE.format(price=shown)
+        price_line = price_tmpl.format(price=shown)
 
-    text = _BASE.format(
+    text = base.format(
         question=question.strip(),
         snapshot_date=snapshot_date,
         price_line=price_line,

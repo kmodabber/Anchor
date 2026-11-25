@@ -2,7 +2,8 @@
 
 These notes freeze the exact prompts, models, and call settings used by
 the pipeline. Prompts are frozen Monday Nov 23; any later change should
-go in as a second named variant in `pipeline/prompts.py` so old runs
+go in as a second named variant in `pipeline/prompts.py` (`TEMPLATES`;
+the paraphrase robustness prompt is the `paraphrase` variant) so old runs
 remain reproducible.
 
 ## Models
@@ -77,7 +78,8 @@ market. The `outcome` column is never included in any prompt.
 
 ## Logged fields per call (JSONL)
 
-`model`, `model_digest`, `config_hash`, `market_id`, `condition`, `run`,
+`model`, `model_digest`, `config_hash`, `phase` (dev, main, paraphrase,
+parser_test), `prompt_variant` (v1, paraphrase), `market_id`, `condition`, `run`,
 `seed`, `shown_price` (whole percent, null for blind), `prompt`,
 `raw_response`, `parsed_probability` (0-100, null on failure),
 `retry_count`, `final_status`, `elapsed_s`, `timestamp`.
