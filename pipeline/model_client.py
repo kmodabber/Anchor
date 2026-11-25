@@ -26,6 +26,8 @@ class ModelClient(Protocol):
 
     def digest_for(self, model: str) -> str: ...
 
+    def version(self) -> str: ...
+
 
 class OllamaClient:
     def __init__(self, host: str = "http://localhost:11434", timeout_s: int = 120):
@@ -46,6 +48,13 @@ class OllamaClient:
     def _get(self, path: str) -> dict:
         with urllib.request.urlopen(self.host + path, timeout=10) as r:
             return json.loads(r.read())
+
+    def version(self) -> str:
+        """Ollama server version, or 'unreachable'."""
+        try:
+            return str(self._get("/api/version").get("version", "unknown"))
+        except Exception:  # noqa: BLE001
+            return "unreachable"
 
     def digest_for(self, model: str) -> str:
         if model in self._digest_cache:
@@ -85,6 +94,9 @@ class FakeClient:
 
     def digest_for(self, model: str) -> str:
         return f"fake:{model}"
+
+    def version(self) -> str:
+        return "fake"
 
     def generate(self, *, model: str, prompt: str, seed: int,
                  temperature: float, max_tokens: int) -> ModelResponse:

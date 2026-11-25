@@ -11,3 +11,5 @@ report/*.aux
 report/*.log
 report/*.out
 report/*.synctex.gz
+# scratch output from dry runs and fixture runs (never committed)
+results/raw/scratch/

@@ -26,7 +26,7 @@ def markets(cfg):
 
 def _run(cfg, markets, out_dir, runs=2, client=None):
     run_pipeline(cfg=cfg, client=client or FakeClient(), markets=markets,
-                 models=[MODEL], runs=runs, results_dir=out_dir)
+                 models=[MODEL], runs=runs, results_dir=out_dir, phase="test")
     with open(results_file(out_dir, MODEL), encoding="utf-8") as f:
         return [json.loads(line) for line in f]
 

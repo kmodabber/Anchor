@@ -60,5 +60,6 @@ evaluation:
 
 paths:
   raw_responses: results/raw
+  manifests: results/manifests   # one line per run: commit, versions, digests, hardware
   tables: results/tables
   figures: results/figures
