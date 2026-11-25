@@ -1,0 +1,301 @@
+market_id,source,category,question,created,resolved,snapshot_date,snapshot_price,outcome,volume
+ks_GOVPARTYFL-26-R,kalshi,politics,Will the Republican party win the governorship in Florida?,2025-01-25T21:21:34Z,2026-11-04T02:12:48Z,2026-10-28T02:12:48Z,0.765,1,27298273.38
+ks_GOVPARTYNV-26-D,kalshi,politics,Will the Democratic party win the governorship in Nevada?,2025-01-25T21:17:12Z,2026-11-04T10:09:14Z,2026-10-28T10:09:14Z,0.765,1,3334273.76
+ks_HOUSECO3-26-D,kalshi,politics,Will Democratic win the House race for CO-3?,2025-07-01T19:51:55Z,2026-11-06T17:13:43Z,2026-10-30T17:13:43Z,0.375,0,472687.36
+ks_HOUSENY17-26-R,kalshi,politics,Will Republican win the House race for NY-17?,2025-07-01T19:47:35Z,2026-11-06T03:11:00Z,2026-10-30T03:11:00Z,0.385,0,3201992.43
+ks_HOUSEPA10-26-R,kalshi,politics,Will Republican win the House race for PA-10?,2025-06-30T21:07:28Z,2026-11-04T03:49:30Z,2026-10-28T03:49:30Z,0.195,0,40399.71
+ks_HOUSETX34-26-D,kalshi,politics,Will Democratic win the House race for TX-34?,2025-07-01T19:43:12Z,2026-11-04T03:59:05Z,2026-10-28T03:59:05Z,0.885,1,73824.58
+ks_KX1SONGSABRINACARPENTER-DEC3125,kalshi,culture,Will Sabrina Carpenter have a #1 hit this year?,2025-06-04T14:20:35Z,2025-06-16T20:35:52Z,2025-06-09T20:35:52Z,0.4,1,11273.0
+ks_KXACQANNOUNCESPACEX-27JAN01,kalshi,economics,Will SpaceX acquire Cursor this year?,2026-04-21T23:55:39Z,2026-06-16T14:03:11Z,2026-06-09T14:03:11Z,0.865,1,42675.46
+ks_KXANYDEMWINTEXAS-26NOV03,kalshi,politics,Will the number of Democrats who win a statewide election in Texas in 2026 be above 0?,2026-02-01T20:33:20Z,2026-11-04T07:51:59Z,2026-10-28T07:51:59Z,0.735,1,52615.91
+ks_KXARRESTJOHNBOLTON-26JAN,kalshi,politics,Will John Bolton be arrested this year?,2025-08-25T19:37:06Z,2025-10-21T21:12:16Z,2025-10-14T21:12:16Z,0.64,1,969995.0
+ks_KXAUCTIONRECORD-27-VIN-117180000,kalshi,culture,Will a Vincent van Gogh artwork break his auction record this year?,2026-05-24T22:40:16Z,2026-11-19T19:48:41Z,2026-11-12T19:48:41Z,0.915,1,37395.94
+ks_KXBOXINGFIGHT-25JUN28JPAUJCES-JPAU,kalshi,sports,"Will Jake Paul win the Jake Paul vs Julio Cesar Chavez Jr boxing fight scheduled for Jun 28, 2025?",2025-06-19T20:18:15Z,2025-06-29T05:21:11Z,2025-06-22T05:21:11Z,0.825,1,141447.0
+ks_KXCAELECTION-2640-YKIM,kalshi,politics,Who will win the 2026 CA-40 House election? Will Young Kim win?,2026-06-30T18:32:47Z,2026-11-10T03:07:19Z,2026-11-03T03:07:19Z,0.59,0,26516.07
+ks_KXCAVOTERID-26,kalshi,politics,Will the California Voter ID initiative pass?,2026-03-19T20:01:56Z,2026-11-04T06:30:25Z,2026-10-28T06:30:25Z,0.19,0,76109.05
+ks_KXCCAPRICE-26MAY47-27.94,kalshi,economics,Will the official Settlement Price for the Current Auction of CARB Joint Auction #47 strictly exceed $27.94?,2026-04-23T19:57:43Z,2026-05-27T20:01:56Z,2026-05-20T20:01:56Z,0.875,1,514934.88
+ks_KXCLOSERMNMSSEN-26NOV10-MSSEN,kalshi,politics,"Will Mississippi US Senate have the smallest margin of victory in the November 3, 2026 general elections for Minnesota US Senate and Mississippi US Senate?",2026-10-01T17:18:08Z,2026-11-10T15:00:00Z,2026-11-03T15:00:00Z,0.55,1,11197.29
+ks_KXDJOKOVICRETIRE-25,kalshi,sports,Will Novak Djokovic announce his retirement this year?,2025-07-18T08:15:39Z,2025-12-31T15:00:00Z,2025-12-24T15:00:00Z,0.05,0,15567.0
+ks_KXDOJEPSTEINOUT-26,kalshi,politics,Will anyone leave the DOJ over the Epstein files release before February?,2025-12-22T23:33:01Z,2026-02-01T04:59:00Z,2026-01-25T04:59:00Z,0.05,0,20891.0
+ks_KXDOTPLOTPUB-26-DOT,kalshi,economics,Will the Fed publish a dot plot in September 2026?,2026-06-20T21:42:31Z,2026-09-16T17:59:00Z,2026-09-09T17:59:00Z,0.9,1,17158.29
+ks_KXEARTHQUAKE-25AUG31-8.0,kalshi,weather,8.0 earthquake before September?,2025-07-18T06:30:24Z,2025-07-30T12:28:01Z,2025-07-23T12:28:01Z,0.14,1,11755.0
+ks_KXEARTHQUAKE-25OCT31-8.0,kalshi,weather,8.0 earthquake in Oct 2025?,2025-10-03T23:00:39Z,2025-11-01T03:59:00Z,2025-10-25T03:59:00Z,0.055,0,73835.0
+ks_KXEGGS-FEB26-0,kalshi,economics,Will egg prices go up in Feb 2026?,2026-02-13T20:34:49Z,2026-03-11T12:25:00Z,2026-03-04T12:25:00Z,0.275,0,32738.0
+ks_KXEGGS-JAN-0,kalshi,economics,Will egg prices go up in Jan 2026?,2026-01-16T00:12:29Z,2026-02-13T13:25:00Z,2026-02-06T13:25:00Z,0.245,0,41850.0
+ks_KXEGGS-MAY26-0,kalshi,economics,Will egg prices rise by more than 0% in May 2026?,2026-04-09T16:02:15Z,2026-06-10T13:25:00Z,2026-06-03T13:25:00Z,0.275,0,41671.13
+ks_KXEGGS-OCT-0,kalshi,economics,Will egg prices go up in Oct 2025?,2025-08-13T17:45:21Z,2025-11-13T13:25:00Z,2025-11-06T13:25:00Z,0.07,0,24624.0
+ks_KXELONVISIT-27JAN-EMUS,kalshi,politics,Will Elon Musk visit the White House before 2027?,2025-11-05T01:50:13Z,2025-11-19T00:48:34Z,2025-11-12T00:48:34Z,0.545,1,12766.0
+ks_KXEOWEEK-26FEB21,kalshi,politics,"Will the President sign more than 0 Executive Orders between Feb 15, 2026 and Feb 21, 2026?",2026-02-13T23:14:40Z,2026-02-21T19:00:58Z,2026-02-14T19:00:58Z,0.83,1,130918.0
+ks_KXEPLBTTS-26OCT10AVLBRE-BTTS,kalshi,sports,Aston Villa vs Brentford: Will both teams score?,2026-10-03T14:02:16Z,2026-10-10T16:07:48Z,2026-10-03T16:07:48Z,0.62,1,26248.62
+ks_KXEPLBTTS-26SEP20FULMUN-BTTS,kalshi,sports,Fulham vs Manchester United: Will both teams score?,2026-09-13T16:02:18Z,2026-09-20T17:25:55Z,2026-09-13T17:25:55Z,0.625,1,161188.83
+ks_KXEXITCONSERV-25,kalshi,politics,Will Freddie Mac and Fannie Mae exit government conservatorship in 2025?,2025-03-19T01:57:42Z,2025-12-31T15:00:00Z,2025-12-24T15:00:00Z,0.05,0,40833.0
+ks_KXFFQBALLENMAHOMES-25SEP09-JALL,kalshi,sports,Will Josh Allen or Patrick Mahomes have more fantasy points in Week 1?,2025-08-15T19:27:31Z,2025-09-09T00:37:41Z,2025-09-02T00:37:41Z,0.6,1,26927.0
+ks_KXFLSD14-26-JTOM,kalshi,politics,Who will win the Florida State Senate District 14 Special General Election? Will Josie Tomkow win?,2026-03-19T20:22:42Z,2026-03-30T16:12:15Z,2026-03-23T16:12:15Z,0.915,0,12078.0
+ks_KXGULF-26,kalshi,politics,"Will Trump rename the Gulf of Mexico to ""Gulf of America"" in 2025?",2025-01-10T22:31:17Z,2025-01-23T16:59:23Z,2025-01-16T16:59:23Z,0.31,1,34792.0
+ks_KXHALOPS-26,kalshi,culture,Will Halo for PlayStation be announced in 2025?,2025-01-03T23:42:27Z,2025-10-25T15:56:55Z,2025-10-18T15:56:55Z,0.52,1,39607.0
+ks_KXHEISMANFINALIST-25-ADP,kalshi,sports,Will Any Defensive Player be a Heisman Trophy Finalist?,2025-11-18T22:39:00Z,2025-12-09T00:05:47Z,2025-12-02T00:05:47Z,0.1,0,100717.0
+ks_KXHUNDREDMATCH-26AUG021300MSGLON-MSG,kalshi,sports,Will MI London vs Manchester Super Giants men's cricket match: Manchester Super Giants win?,2026-07-26T00:02:20Z,2026-08-02T19:53:52Z,2026-07-26T19:53:52Z,0.95,0,2300301.78
+ks_KXIAEAIRANAGREEMENT-26,kalshi,politics,Will Iran re-enter their IAEA monitoring agreement?,2025-07-16T16:29:47Z,2025-10-20T23:36:14Z,2025-10-13T23:36:14Z,0.23,1,17965.0
+ks_KXIASENATE-26-JTUR,kalshi,politics,Who will win the 2026 Iowa Senate election? Will Josh Turek win?,2026-05-05T17:28:58Z,2026-11-04T06:37:43Z,2026-10-28T06:37:43Z,0.415,1,37453.14
+ks_KXKXSPOTIFYALBUMRELEASEDATESC-26FEB01,kalshi,culture,Will YoungBoy Never Broke Again release Slime Cry before February?,2025-12-24T07:50:22Z,2026-01-16T16:33:14Z,2026-01-09T16:33:14Z,0.29,1,12701.0
+ks_KXLIGAMXBTTS-26OCT09PUELEO-BTTS,kalshi,sports,Puebla vs Leon: Will both teams score?,2026-10-03T01:02:28Z,2026-10-10T02:56:21Z,2026-10-03T02:56:21Z,0.565,1,70090.67
+ks_KXLIGUE1BTTS-26SEP20OLMPSG-BTTS,kalshi,sports,Marseille vs PSG: Will both teams score?,2026-09-13T19:02:32Z,2026-09-20T20:39:58Z,2026-09-13T20:39:58Z,0.615,1,34175.79
+ks_KXMAMDANIGRACIE-26FEB01,kalshi,politics,"Will Zohran Mamdani visit Gracie Mansion before Feb 1, 2026?",2025-11-11T14:37:24Z,2025-12-05T20:51:43Z,2025-11-28T20:51:43Z,0.795,1,28210.0
+ks_KXMEETPTZ-25,kalshi,politics,"Trump, Putin, and Zelenskyy meet before Aug 21, 2025?",2025-08-07T18:49:51Z,2025-08-21T03:59:00Z,2025-08-14T03:59:00Z,0.055,0,321773.0
+ks_KXMEPRIMARY-01R26-RRUS,kalshi,politics,Will Ronald Russell be the Republican nominee for ME-01?,2026-04-17T18:16:50Z,2026-06-10T15:29:50Z,2026-06-03T15:29:50Z,0.925,1,23141.82
+ks_KXMLBSERIES-25LADPHI-PHI,kalshi,sports,Los Angeles D vs Philadelphia: Will Philadelphia win?,2025-10-02T15:01:07Z,2025-10-10T01:42:57Z,2025-10-03T01:42:57Z,0.465,0,588716.0
+ks_KXMLBSERIES-26CLETBALCS-TB,kalshi,sports,Will Cleveland vs Tampa Bay Championship Series winner: Tampa Bay win?,2026-10-11T05:56:16Z,2026-10-20T03:10:24Z,2026-10-13T03:10:24Z,0.465,1,169750.43
+ks_KXMLBSERIES-26LADMILNLCS-MIL,kalshi,sports,Will Los Angeles D vs Milwaukee Championship Series winner: Milwaukee win?,2026-10-08T05:21:57Z,2026-10-16T03:11:15Z,2026-10-09T03:11:15Z,0.405,1,202917.29
+ks_KXMLBTRIPLECROWN-26-YALVAREZ44,kalshi,sports,Will Yordan Alvarez win the Pro Baseball Triple Crown?,2026-08-08T00:09:08Z,2026-09-28T00:54:07Z,2026-09-21T00:54:07Z,0.085,0,107657.86
+ks_KXMMAFIGHT-26JUL31YAGSHIPOWELL-YAGSHI,kalshi,sports,"PFL: Will Dovlet Yagshimuradov win the Dovlet Yagshimuradov vs Simeon Powell professional MMA fight scheduled for Jul 31, 2026?",2026-07-30T01:48:00Z,2026-08-08T13:39:24Z,2026-08-01T13:39:24Z,0.685,0,181873.36
+ks_KXMRBEAST100M-25AUG30,kalshi,culture,Will MrBeast's next video get more than 100 Million views a week after upload?,2025-07-29T20:16:40Z,2025-08-09T14:00:04Z,2025-08-02T14:00:04Z,0.215,0,233345.0
+ks_KXMRBEAST100M-25AUG31,kalshi,culture,Will any MrBeast video get more than 100 Million views a week after upload in August?,2025-08-11T21:57:56Z,2025-09-08T14:00:00Z,2025-09-01T14:00:00Z,0.1,0,187400.0
+ks_KXMUSKOAI-26,kalshi,economics,Will Elon win his case against OpenAI?,2026-01-14T14:59:02Z,2026-05-18T20:14:24Z,2026-05-11T20:14:24Z,0.395,0,1330988.49
+ks_KXMUSKPACKAGEVOTE-26JAN01,kalshi,economics,Will Tesla shareholders approve Elon Musk's new pay package this year?,2025-09-05T18:07:47Z,2025-11-06T22:13:35Z,2025-10-30T22:13:35Z,0.92,1,1594577.0
+ks_KXMUSKTAGDJT-25AUG,kalshi,culture,Will Musk tag Trump in a post on X in Aug 2025?,2025-08-01T21:04:06Z,2025-09-01T03:59:00Z,2025-08-25T03:59:00Z,0.06,0,22019.0
+ks_KXMUSKTAGDJT-25JUL,kalshi,culture,Will Musk tag Trump in a post on X in Jul 2025?,2025-07-02T19:25:12Z,2025-08-01T03:59:00Z,2025-07-25T03:59:00Z,0.175,0,145254.0
+ks_KXMUSKTAGDJT-25SEP,kalshi,culture,Will Elon Musk tag Donald Trump in a post on X in Sep 2025?,2025-09-02T22:04:02Z,2025-10-01T03:59:00Z,2025-09-24T03:59:00Z,0.15,0,29270.0
+ks_KXNBAPICKTRADE-26P1-Y,kalshi,sports,Will the #1 overall pick be traded in the 2026 Pro Basketball Draft?,2026-05-29T16:16:02Z,2026-06-24T00:47:26Z,2026-06-17T00:47:26Z,0.125,0,20436.64
+ks_KXNBASERIESCOMEBACK-26NYKSASFIN-Y,kalshi,sports,Will either New York or San Antonio win the series after trailing by 2+ games in the New York vs San Antonio Pro Basketball Finals series in the 2026 Pro Basketball Playoffs?,2026-06-01T23:01:57Z,2026-06-14T04:26:15Z,2026-06-07T04:26:15Z,0.215,0,53417.41
+ks_KXNCAAFGAME-26NOV14CINISU-ISU,kalshi,sports,Cincinnati vs Iowa St.: Will Iowa St. win?,2026-10-31T22:08:07Z,2026-11-14T20:10:25Z,2026-11-07T20:10:25Z,0.49,1,603962.18
+ks_KXNCAAFGAME-26NOV21GASOTROY-GASO,kalshi,sports,Georgia Southern vs Troy: Will Georgia Southern win?,2026-11-07T23:05:24Z,2026-11-22T00:10:23Z,2026-11-15T00:10:23Z,0.565,1,40080.23
+ks_KXNCAAFGAME-26NOV21MOREBUT-BUT,kalshi,sports,Morehead St. vs Butler: Will Butler win?,2026-11-07T20:17:02Z,2026-11-21T20:55:48Z,2026-11-14T20:55:48Z,0.825,1,14124.67
+ks_KXNCAAFGAME-26NOV21NCSTFSU-FSU,kalshi,sports,NC St. vs Florida St.: Will Florida St. win?,2026-11-07T20:09:26Z,2026-11-22T00:00:08Z,2026-11-15T00:00:08Z,0.725,0,175413.87
+ks_KXNCAAFGAME-26NOV21UNHME-UNH,kalshi,sports,New Hampshire vs Maine: Will New Hampshire win?,2026-11-07T20:18:04Z,2026-11-21T20:55:47Z,2026-11-14T20:55:47Z,0.53,1,30838.44
+ks_KXNDEBTSHRINK-25JUL,kalshi,economics,Will the national debt shrink this quarter?,2025-06-17T20:12:09Z,2025-07-01T03:59:00Z,2025-06-24T03:59:00Z,0.485,1,279961.0
+ks_KXNETANYAHUALSHARAAMEET-25,kalshi,politics,Will Benjamin Netanyahu meet with Ahmed al-Sharaa before Oct 2025?,2025-07-08T23:54:11Z,2025-10-01T03:59:00Z,2025-09-24T03:59:00Z,0.24,0,17257.0
+ks_KXNEWGLENN-26,kalshi,science_tech,Will Blue Origin's New Glenn rocket launch again in 2025?,2025-06-18T21:39:45Z,2025-11-19T19:36:45Z,2025-11-12T19:36:45Z,0.92,1,50930.0
+ks_KXNEWVIDEOFETTYWAP-26,kalshi,culture,Will Fetty Wap post a new video before July?,2026-03-10T20:35:39Z,2026-03-20T14:21:12Z,2026-03-13T14:21:12Z,0.69,1,12602.0
+ks_KXNFL1QBTTS-26SEP14DENKC-Y,kalshi,sports,Denver vs Kansas City: 1st Quarter Both Teams to Score: Will both teams score?,2026-09-02T19:43:16Z,2026-09-15T01:07:22Z,2026-09-08T01:07:22Z,0.83,1,21222.69
+ks_KXNFLGAME-26NOV15HOUCLE-HOU,kalshi,sports,Houston vs Cleveland: Will Houston win?,2026-11-03T05:03:13Z,2026-11-15T21:15:21Z,2026-11-08T21:15:21Z,0.655,0,8115107.2
+ks_KXNFLGAME-26OCT11CHIGB-CHI,kalshi,sports,CHI Bears vs GB Packers: Will Chicago win?,2026-09-29T04:01:25Z,2026-10-11T20:07:30Z,2026-10-04T20:07:30Z,0.49,0,9073977.06
+ks_KXNFLGAME-26OCT11LVNE-NE,kalshi,sports,LV Raiders vs NE Patriots: Will New England win?,2026-09-29T04:01:17Z,2026-10-11T20:07:29Z,2026-10-04T20:07:29Z,0.61,1,2675250.7
+ks_KXNFLGAME-26OCT18BUFLV-BUF,kalshi,sports,BUF Bills vs LV Raiders: Will Buffalo win?,2026-10-06T04:01:27Z,2026-10-18T23:33:19Z,2026-10-11T23:33:19Z,0.7,1,11706466.2
+ks_KXNFLGAME-26OCT25GBDET-DET,kalshi,sports,Green Bay vs Detroit: Will Detroit win?,2026-10-13T04:01:22Z,2026-10-25T23:33:17Z,2026-10-18T23:33:17Z,0.605,1,9655166.23
+ks_KXNFLRECYDSRECORD-25-JSN,kalshi,sports,Will Jaxon Smith-Njigba break the pro football regular season receiving yards record in 2025-26 season?,2025-12-09T22:25:23Z,2026-01-04T04:19:39Z,2025-12-28T04:19:39Z,0.105,0,25555.0
+ks_KXNFLXINCREASE-26,kalshi,economics,Netflix price increase in 2026?,2025-12-07T16:50:17Z,2026-03-30T17:53:05Z,2026-03-23T17:53:05Z,0.85,1,228405.0
+ks_KXNHLGAME-26NOV03EDMNJ-NJ,kalshi,sports,Edmonton vs New Jersey: Will New Jersey win?,2026-10-28T01:28:18Z,2026-11-04T03:17:22Z,2026-10-28T03:17:22Z,0.53,1,730318.13
+ks_KXNHLGAME-26NOV21BUFFLA-BUF,kalshi,sports,Buffalo vs Florida: Will Buffalo win?,2026-11-14T23:02:13Z,2026-11-22T01:38:44Z,2026-11-15T01:38:44Z,0.375,0,202987.22
+ks_KXNHLGAME-26OCT29BOSSTL-STL,kalshi,sports,Boston vs St. Louis: Will St. Louis win?,2026-10-23T01:28:07Z,2026-10-30T02:41:19Z,2026-10-23T02:41:19Z,0.495,1,318008.02
+ks_KXNOVOHIMS-26,kalshi,economics,Will Novo Nordisk sue Hims?,2025-06-28T03:33:40Z,2026-01-01T07:33:28Z,2025-12-25T07:33:28Z,0.08,0,23543.0
+ks_KXNVCONTROLLER-26NOV03-MMAC,kalshi,politics,Will Michael MacDougall win the 2026 Nevada State Controller election?,2026-09-09T20:39:52Z,2026-11-04T20:28:22Z,2026-10-28T20:28:22Z,0.325,1,11787.19
+ks_KXNWEST-27-JAN01,kalshi,culture,North West album drop on Spotify in 2026?,2026-01-15T15:24:22Z,2026-05-01T16:42:24Z,2026-04-24T16:42:24Z,0.695,1,13554.09
+ks_KXNYCBOROUGHWINSTAT-25-ACUO,kalshi,politics,Who will win Staten Island in the 2025 NYC Dem Mayoral primary? Will Andrew Cuomo win?,2025-06-23T03:47:19Z,2025-07-23T03:10:20Z,2025-07-16T03:10:20Z,0.94,1,16248.0
+ks_KXOAISOCIAL-25,kalshi,science_tech,Will OpenAI release a social app in 2025?,2025-03-19T01:37:14Z,2025-10-02T20:45:27Z,2025-09-25T20:45:27Z,0.455,1,257308.0
+ks_KXPERFORMROLEJEANGREY-SAD,kalshi,culture,Will Sadie Sink perform as Jean Grey in The first Marvel Studios live-action film in the Marvel Cinematic Universe to feature Jean Grey?,2026-01-12T23:16:30Z,2026-07-31T15:45:33Z,2026-07-24T15:45:33Z,0.715,1,766033.72
+ks_KXPGAPLAYOFF-USO26,kalshi,sports,Will there be a playoff at the 2026 U.S. Open?,2026-05-18T20:01:13Z,2026-06-21T23:11:35Z,2026-06-14T23:11:35Z,0.26,0,32953.89
+ks_KXPLAYBOICARTI-25-PCAR,kalshi,culture,Will Playboi Carti release another album this year?,2025-03-27T13:44:07Z,2025-12-31T15:00:00Z,2025-12-24T15:00:00Z,0.255,0,45507.0
+ks_KXPRICEINCREASESPOTIFYFAMILY-26,kalshi,economics,Spotify Premium Family Plan price increase before 2027?,2025-11-06T00:55:06Z,2026-01-20T23:21:37Z,2026-01-13T23:21:37Z,0.865,1,51494.0
+ks_KXPROGMAYORSWEEP-25NOV04,kalshi,politics,Will progressive mayors sweep this year?,2025-09-24T17:39:57Z,2025-11-07T21:56:40Z,2025-10-31T21:56:40Z,0.23,0,316923.0
+ks_KXRADIOHEAD-25,kalshi,culture,Will Radiohead announce a new tour this year?,2025-03-19T21:58:49Z,2025-09-04T14:16:39Z,2025-08-28T14:16:39Z,0.71,1,15724.0
+ks_KXRANKLISTSONGFORGOOD-25DEC-FOR,kalshi,culture,Will 'For Good' enter the Top 20 on the Billboard Hot 100 chart for the week of December 6th?,2025-11-19T16:20:38Z,2025-12-02T15:07:05Z,2025-11-25T15:07:05Z,0.55,0,64674.0
+ks_KXREALID-25,kalshi,other,Will the Real ID deadline be delayed again?,2025-04-01T13:14:48Z,2025-05-08T21:33:02Z,2025-05-01T21:33:02Z,0.09,0,117223.0
+ks_KXROSTERT1-26,kalshi,sports,Will T1's League of Legends's roster stay together before 2027?,2025-08-13T22:29:52Z,2025-11-17T21:04:09Z,2025-11-10T21:04:09Z,0.75,0,12555.0
+ks_KXSAMEPARTYCONGRESS-27FEB01,kalshi,politics,Will the same party control the U.S. House and Senate?,2026-08-19T18:37:47Z,2026-11-08T14:30:24Z,2026-11-01T14:30:24Z,0.705,1,17714.15
+ks_KXSCRSENSOUTRIGHT-26AUG11,kalshi,politics,Will the South Carolina special Republican primary be won outright?,2026-07-13T20:19:56Z,2026-08-12T00:17:58Z,2026-08-05T00:17:58Z,0.075,0,64963.06
+ks_KXSENATELA-26NOV-R,kalshi,politics,Will Republicans win the Senate race in Louisiana?,2025-11-20T20:49:56Z,2026-11-04T05:35:02Z,2026-10-28T05:35:02Z,0.9055,1,1623902.37
+ks_KXSERIEABTTS-26AUG22GENNAP-BTTS,kalshi,sports,Genoa vs Napoli: Will both teams score?,2026-08-15T19:04:16Z,2026-08-22T21:07:08Z,2026-08-15T21:07:08Z,0.455,0,25406.61
+ks_KXSERIEABTTS-26OCT11CAGJUV-BTTS,kalshi,sports,Cagliari vs Juventus: Will both teams score?,2026-10-04T19:02:35Z,2026-10-11T20:43:00Z,2026-10-04T20:43:00Z,0.46,1,142753.85
+ks_KXSERIEABTTS-26OCT29FROLEC-BTTS,kalshi,sports,Frosinone vs Lecce: Will both teams score?,2026-10-22T18:02:47Z,2026-10-29T19:34:28Z,2026-10-22T19:34:28Z,0.63,1,144600.84
+ks_KXSEYCHELLESPRES-25-WRAM,kalshi,politics,Who will win the next Seychellois presidential election? Will Wavel Ramkalawan win?,2025-05-24T01:21:00Z,2025-10-13T16:04:49Z,2025-10-06T16:04:49Z,0.35,0,50477.0
+ks_KXSNAPELECTIONFR-25,kalshi,politics,Will there be a snap election in France?,2025-08-27T18:27:49Z,2025-09-15T03:59:00Z,2025-09-08T03:59:00Z,0.085,0,11434.0
+ks_KXSP500BTCPURCHASE-25,kalshi,crypto,Will another S&P 500 company buy bitcoin in 2025?,2025-07-08T23:54:36Z,2025-11-25T20:42:29Z,2025-11-18T20:42:29Z,0.275,1,38208.0
+ks_KXSPOTIFYALBUMRELEASEDATEKANYE-25DEC13,kalshi,culture,"Will Kanye West / Ye release 'BULLY' before Dec 13, 2025?",2025-11-03T20:53:19Z,2025-12-13T15:00:00Z,2025-12-06T15:00:00Z,0.205,0,13102.0
+ks_KXSPOTIFYALBUMRELEASEDATEKANYE-26JAN31,kalshi,culture,Will Kanye West / Ye release BULLY before January 31st?,2025-12-27T17:25:28Z,2026-01-31T15:00:00Z,2026-01-24T15:00:00Z,0.37,0,852965.0
+ks_KXSPOTIFYALBUMRELEASEDATEKANYE-DAY,kalshi,culture,Will Kanye West / Ye release 'BULLY' before Nov 8th?,2025-09-30T16:46:02Z,2025-11-08T15:00:00Z,2025-11-01T15:00:00Z,0.9,0,34355.0
+ks_KXSPOTIFYALBUMRELEASEDATEKANYE-MAR28-26,kalshi,culture,Will Kanye West / Ye release BULLY before Mar 28th?,2026-03-09T22:00:59Z,2026-03-28T14:00:00Z,2026-03-21T14:00:00Z,0.82,1,1265656.0
+ks_KXSPOTIFYSONGRELEASETS-25B,kalshi,culture,Will Taylor Swift release a song before October 3rd?,2025-08-21T15:53:39Z,2025-10-03T04:06:01Z,2025-09-26T04:06:01Z,0.125,0,545696.0
+ks_KXSPOTIFYSONGTAYLORSWIFT-25-TAY,kalshi,culture,Will Taylor Swift release another new song before October 11th?,2025-10-03T16:12:15Z,2025-10-11T14:00:00Z,2025-10-04T14:00:00Z,0.095,0,80272.0
+ks_KXSTREAMERHAIRCUT-25OCT01,kalshi,culture,"Will Kai Cenat cut their hair on stream before Oct 1, 2025?",2025-09-02T14:26:15Z,2025-09-30T22:50:09Z,2025-09-23T22:50:09Z,0.6,1,169855.0
+ks_KXTAYLORSWIFT-26,kalshi,culture,Will Taylor Swift release an album this year?,2025-09-04T21:04:17Z,2025-10-03T04:04:55Z,2025-09-26T04:04:55Z,0.24,1,76967.0
+ks_KXTECHLAYOFF-25APR-1.2,kalshi,economics,Tech layoffs up in Apr 2025?,2025-04-29T15:07:56Z,2025-06-03T13:59:00Z,2025-05-27T13:59:00Z,0.715,0,12962.0
+ks_KXTECHLAYOFF-25DEC-1.7,kalshi,economics,Tech layoffs up in December 2025?,2026-01-10T00:09:10Z,2026-02-03T14:59:00Z,2026-01-27T14:59:00Z,0.405,0,55918.0
+ks_KXTOPALBUMBYCARDIB-25,kalshi,culture,Cardi B has a #1 album in 2025?,2025-06-25T15:41:36Z,2025-09-29T15:58:02Z,2025-09-22T15:58:02Z,0.85,1,148098.0
+ks_KXTOPALBUMBYWICKED-25DEC06-WIC,kalshi,culture,Will 'Wicked: For Good – The Soundtrack' debut at No. 1 on the Billboard 200?,2025-11-12T17:25:04Z,2025-12-01T04:59:00Z,2025-11-24T04:59:00Z,0.085,0,82235.0
+ks_KXTOPALBUMDONTBEDUMB-26JAN31-DON,kalshi,culture,Will A$AP Rocky's Don't Be Dumb debut at #1?,2026-01-09T16:03:33Z,2026-01-26T04:59:00Z,2026-01-19T04:59:00Z,0.69,1,221979.0
+ks_KXTOPALBUMTHEFALLOFF-26FEB21-FAL,kalshi,culture,Will J. Cole's The Fall-Off debut at #1?,2026-01-14T18:57:47Z,2026-02-16T04:59:00Z,2026-02-09T04:59:00Z,0.74,1,407888.0
+ks_KXTRUMPBBC-26,kalshi,politics,Will Trump sue the BBC this year?,2025-11-17T22:06:48Z,2025-12-16T04:29:22Z,2025-12-09T04:29:22Z,0.09,1,59935.0
+ks_KXTRUMPFOOTBALL-26JAN01,kalshi,politics,Will Donald Trump attend a football game this year?,2025-09-11T21:40:30Z,2025-11-09T23:58:08Z,2025-11-02T23:58:08Z,0.725,1,288674.0
+ks_KXTRUMPGA14-26MAY19,kalshi,politics,Will Trump endorse a candidate other than Marjorie Taylor Greene?,2025-11-17T22:12:02Z,2026-02-05T05:07:32Z,2026-01-29T05:07:32Z,0.71,1,39158.0
+ks_KXTRUMPHUANGTALK-26DEC01-DEC01,kalshi,politics,Will Jensen Huang talk to Trump again in Nov 2026?,2026-11-11T22:37:21Z,2026-11-23T15:40:12Z,2026-11-16T15:40:12Z,0.38,1,56459.52
+ks_KXTSWIFTTOYSTORY-26JUN30,kalshi,culture,Will Taylor Swift release a song for Toy Story 5?,2026-04-30T22:25:37Z,2026-06-05T14:17:57Z,2026-05-29T14:17:57Z,0.15,1,203372.48
+ks_KXTXHOUSE-26-R,kalshi,politics,Who will win the Texas House of Representatives? Will Republican Party win?,2026-04-10T21:52:01Z,2026-11-06T21:44:11Z,2026-10-30T21:44:11Z,0.75,0,13108.7
+ks_KXTXRAILROAD-26-JROS,kalshi,politics,Who will win the 2026 Texas Railroad Commissioner Election? Will Jon Rosenthal win?,2026-05-27T20:35:38Z,2026-11-04T08:50:20Z,2026-10-28T08:50:20Z,0.495,1,141286.58
+ks_KXUECLBTTS-26OCT15TWETHU-BTTS,kalshi,sports,Enschede vs Thun: Will both teams score?,2026-10-08T19:03:13Z,2026-10-15T20:53:42Z,2026-10-08T20:53:42Z,0.535,0,14093.73
+ks_KXUELADVANCE-26AUG13CSKMTA-CSK,kalshi,sports,Will CSKA Sofia vs Maccabi Tel Aviv: CSKA Sofia advance?,2026-08-06T18:30:16Z,2026-08-13T20:00:33Z,2026-08-06T20:00:33Z,0.75,1,64029.91
+ks_KXUFCFIGHT-26NOV14THORAD-RAD,kalshi,sports,Stephen Thompson vs Charles Radtke: Will Charles Radtke win?,2026-11-01T04:35:47Z,2026-11-15T01:59:36Z,2026-11-08T01:59:36Z,0.45,0,1591644.43
+ks_KXUFCOCCUR-26CMCGMHOL-26JUL13,kalshi,sports,Will Conor McGregor and Max Holloway fight before July 13?,2026-05-18T18:59:57Z,2026-07-12T05:07:39Z,2026-07-05T05:07:39Z,0.915,1,345214.48
+ks_KXUFCWHITEHOUSE-26JUL05,kalshi,sports,Will the UFC host a fight at the White House by the US' 250th anniversary?,2025-07-08T23:40:20Z,2026-06-15T13:21:36Z,2026-06-08T13:21:36Z,0.935,1,264616.89
+ks_KXUSOPENCUPADVANCE-26OCT21CLBSTL-CLB,kalshi,sports,Columbus vs Saint Louis: Will Columbus advance?,2026-10-08T00:30:21Z,2026-10-22T03:19:51Z,2026-10-15T03:19:51Z,0.135,0,211265.82
+ks_KXUSOPENCUPADVANCE-26SEP14COLSTL-STL,kalshi,sports,Colorado vs Saint Louis: Will Saint Louis advance?,2026-09-01T00:37:00Z,2026-09-17T02:00:00Z,2026-09-10T02:00:00Z,0.81,1,104760.38
+ks_KXVTGOVOUTRIGHT-26NOV03,kalshi,politics,Will anyone win the Vermont Governor election outright?,2026-10-12T19:25:49Z,2026-11-04T05:50:48Z,2026-10-28T05:50:48Z,0.7,1,10850.24
+ks_KXWC2HBTTS-26JUN23PORUZB-BTTS,kalshi,sports,Portugal vs Uzbekistan: Will both teams score in the 2nd Half?,2026-06-16T15:26:59Z,2026-06-23T19:00:08Z,2026-06-16T19:00:08Z,0.225,0,107006.79
+ks_KXWC2HBTTS-26JUN24SCOBRA-BTTS,kalshi,sports,Scotland vs Brazil: Will both teams score in the 2nd Half?,2026-06-16T15:26:47Z,2026-06-25T00:04:45Z,2026-06-18T00:04:45Z,0.215,0,34504.02
+ks_KXWCAWARDCOMBO-26KMBAPP10-YES,kalshi,sports,Will Kylian Mbappe win the Golden Boot and the Golden Ball in the 2026 Men's FIFA World Cup?,2026-06-24T17:11:37Z,2026-07-19T22:43:47Z,2026-07-12T22:43:47Z,0.32,0,76918.59
+ks_KXWCAWARDCOMBO-26LMESSI10-YES,kalshi,sports,Will Lionel Messi win the Golden Boot and the Golden Ball in the 2026 Men's FIFA World Cup?,2026-06-23T17:20:22Z,2026-07-19T22:16:10Z,2026-07-12T22:16:10Z,0.205,0,270120.18
+ks_KXWCHOSTKO-26-1,kalshi,sports,Will all host nations reach the knockout stage of the 2026 World Cup?,2026-05-14T14:52:53Z,2026-06-25T03:05:50Z,2026-06-18T03:05:50Z,0.7,1,33124.05
+ks_KXWCTEAMSINGAME-26ARGPOR-Y,kalshi,sports,Will Argentina play Portugal in the 2026 Men's FIFA World Cup?,2026-06-15T02:41:44Z,2026-07-08T15:38:26Z,2026-07-01T15:38:26Z,0.05,0,17302.03
+ks_KXWCTEAMSINGAME-26BRAARG-Y,kalshi,sports,Will Brazil play Argentina in the 2026 Men's FIFA World Cup?,2026-06-22T02:09:20Z,2026-07-06T15:26:32Z,2026-06-29T15:26:32Z,0.2,0,13998.15
+ks_KXWCTEAMSINGAME-26USAIRI-Y,kalshi,sports,Will USA play Iran in the 2026 Men's FIFA World Cup?,2026-06-15T14:27:35Z,2026-06-28T19:28:12Z,2026-06-21T19:28:12Z,0.05,0,17480.07
+ks_KXWNBA40PTS-26CCLARK22-Y,kalshi,sports,Will Caitlin Clark score 40+ points in any individual game in the 2026 Women's Pro Basketball regular season?,2026-05-06T00:25:16Z,2026-07-23T20:50:20Z,2026-07-16T20:50:20Z,0.23,1,18604.47
+ks_KXWNBA7FIGS-25,kalshi,sports,Will the first 7 figure WNBA player salary contract happen in 2025?,2025-08-14T19:06:31Z,2026-01-01T04:59:00Z,2025-12-25T04:59:00Z,0.05,0,11600.0
+ks_KXWNBARAISE-25,kalshi,sports,Will WNBA players get a raise in 2025?,2025-07-24T14:30:14Z,2026-01-01T04:59:00Z,2025-12-25T04:59:00Z,0.07,0,16633.0
+ks_KXWOMHOCKEY-26FEB13CANCHE-CHE,kalshi,sports,Canada vs Switzerland: Will Switzerland win?,2026-02-04T16:12:53Z,2026-02-13T22:45:39Z,2026-02-06T22:45:39Z,0.14,0,236792.0
+ks_KXWOMHOCKEY-26FEB14SWESVK-SWE,kalshi,sports,Sweden vs Slovakia: Will Sweden win?,2026-02-04T16:12:53Z,2026-02-14T13:50:03Z,2026-02-07T13:50:03Z,0.88,1,103190.0
+ks_KXWOMHOCKEY-26FEB14USADNK-USA,kalshi,sports,United States vs Denmark: Will United States win?,2026-02-04T16:12:55Z,2026-02-14T22:44:40Z,2026-02-07T22:44:40Z,0.92,1,834125.0
+ks_KXWOMHOCKEY-26FEB15USADEU-USA,kalshi,sports,United States vs Germany: Will United States win?,2026-02-04T16:12:55Z,2026-02-15T22:39:57Z,2026-02-08T22:39:57Z,0.815,1,507763.0
+ks_KXWTATOURNWIN-26SWVW-Y,kalshi,sports,Will Serena Williams and Venus Williams win Wimbledon Women Doubles in 2026?,2026-06-16T14:12:16Z,2026-07-04T20:16:56Z,2026-06-27T20:16:56Z,0.075,0,81370.32
+ks_KXWTESTMATCH-26JUL100600INDENG-ENG,kalshi,sports,England vs India: Will England win?,2026-06-27T00:00:47Z,2026-07-13T11:50:24Z,2026-07-06T11:50:24Z,0.51,0,1045309.88
+ks_KXYTVIEWS-DRA26SEP-13.0M,kalshi,culture,Will Drake have above 13M daily views in August 2026?,2026-07-28T18:45:05Z,2026-08-11T20:47:52Z,2026-08-04T20:47:52Z,0.215,1,23225.42
+ks_KXYTVIEWS-JUS26SEP-18.0M,kalshi,culture,Will Justin Bieber have above 18M daily views in August 2026?,2026-07-28T20:17:19Z,2026-09-01T14:00:00Z,2026-08-25T14:00:00Z,0.085,0,13969.58
+ks_KXYTVIEWS-TAY26SEP-15.0M,kalshi,culture,Will Taylor Swift have above 15M daily views in August 2026?,2026-07-28T19:59:45Z,2026-08-26T14:21:39Z,2026-08-19T14:21:39Z,0.28,1,11645.04
+pm_1198451,polymarket,politics,"Israel strikes Iran by February 28, 2026?",2026-01-16T14:54:38Z,2026-02-28T09:14:55Z,2026-02-21T09:14:55Z,0.15,1,4085750.53
+pm_1334172,polymarket,economics,Will USD reach 1.7M Iranian rials by February 28?,2026-02-04T16:38:47Z,2026-03-02T02:17:55Z,2026-02-23T02:17:55Z,0.445,1,624926.1
+pm_1363685,polymarket,economics,Will NVIDIA (NVDA) beat quarterly earnings?,2026-02-10T19:18:13Z,2026-02-26T00:10:10Z,2026-02-19T00:10:10Z,0.945,1,381687.06
+pm_1369645,polymarket,economics,Will Rocket Lab (RKLB) beat quarterly earnings?,2026-02-12T15:03:13Z,2026-02-26T23:40:44Z,2026-02-19T23:40:44Z,0.785,1,371770.43
+pm_1369672,polymarket,economics,Will Papa John's International (PZZA) beat quarterly earnings?,2026-02-12T15:23:33Z,2026-02-26T14:23:52Z,2026-02-19T14:23:52Z,0.67,1,365785.09
+pm_1370976,polymarket,economics,Will Hilton Grand Vacations (HGV) beat quarterly earnings?,2026-02-12T22:19:00Z,2026-02-26T14:45:26Z,2026-02-19T14:45:26Z,0.22,0,850539.22
+pm_1450859,polymarket,politics,Will the Virginia redistricting referendum pass?,2026-02-26T22:26:41Z,2026-04-22T03:51:32Z,2026-04-15T03:51:32Z,0.85,1,2152332.3
+pm_1795527,polymarket,politics,"Russia x Ukraine ceasefire by May 31, 2026?",2026-03-30T19:26:34Z,2026-05-09T19:52:26Z,2026-05-02T19:52:26Z,0.0595,1,141250712.68
+pm_1819243,polymarket,economics,QatarEnergy announces/resumes LNG production in Qatar by April 30?,2026-04-01T18:54:12Z,2026-05-05T00:30:00Z,2026-04-28T00:30:00Z,0.0805,1,25495050.86
+pm_2154992,polymarket,weather,Confirmed case of Hantavirus in US by May 15?,2026-05-04T14:14:05Z,2026-05-16T03:29:54Z,2026-05-09T03:29:54Z,0.36,1,1295665.97
+pm_2407533,polymarket,crypto,Will Microstrategy announce a Bitcoin purchase June 2-8?,2026-06-01T04:30:00Z,2026-06-08T14:05:54Z,2026-06-01T14:05:54Z,0.635,1,1378555.98
+pm_2448672,polymarket,sports,Will A Nation That Has Never Won the World Cup Win in 2026?,2026-06-05T23:04:35Z,2026-07-12T06:05:56Z,2026-07-05T06:05:56Z,0.185,0,1694606.74
+pm_2470848,polymarket,sports,Will Trump be in the WC Champions Photo?,2026-06-08T15:28:21Z,2026-07-24T00:32:15Z,2026-07-17T00:32:15Z,0.705,1,26990137.75
+pm_2470849,polymarket,sports,President Trump to Attend World Cup Final?,2026-06-08T15:29:25Z,2026-07-19T22:58:25Z,2026-07-12T22:58:25Z,0.92,1,1538609.97
+pm_2663611,polymarket,politics,US-Iran 60 day negotiation period extended?,2026-06-24T04:50:48Z,2026-08-21T08:47:27Z,2026-08-14T08:47:27Z,0.225,0,2894249.76
+pm_517031,polymarket,crypto,Will MicroStrategy hold 500k+ BTC before March?,2025-01-01T13:26:08Z,2025-03-01T08:35:25Z,2025-02-22T08:35:25Z,0.465,0,3295915.83
+pm_517566,polymarket,crypto,Will Andrew Tate leave Romania before April?,2025-01-06T14:17:22Z,2025-02-27T21:59:51Z,2025-02-20T21:59:51Z,0.175,1,121793.3
+pm_517600,polymarket,politics,Conservatives win majority in Canadian election?,2025-01-06T17:21:31Z,2025-04-30T05:32:19Z,2025-04-23T05:32:19Z,0.075,0,7322211.32
+pm_517989,polymarket,weather,Will all LA wildfires be fully contained before February?,2025-01-09T15:17:52Z,2025-02-01T05:00:45Z,2025-01-25T05:00:45Z,0.33,1,234988.83
+pm_518009,polymarket,economics,U.S. Government funding lapse on March 15?,2025-01-09T19:11:41Z,2025-03-19T00:54:58Z,2025-03-12T00:54:58Z,0.165,1,9824901.65
+pm_518036,polymarket,economics,US government shutdown in 2025?,2025-01-09T19:48:58Z,2025-10-01T06:35:55Z,2025-09-24T06:35:55Z,0.755,1,3512314.57
+pm_518472,polymarket,crypto,Will Berachain launch a token in January?,2025-01-13T23:15:11Z,2025-02-01T09:26:30Z,2025-01-25T09:26:30Z,0.081,0,270148.84
+pm_518491,polymarket,politics,Netanyahu attends Auschwitz commemoration in Poland?,2025-01-14T15:47:41Z,2025-01-28T10:32:54Z,2025-01-21T10:32:54Z,0.075,0,15930.27
+pm_518493,polymarket,economics,RedNote/Xiaohongshu #1 app on Jan 24?,2025-01-14T16:20:54Z,2025-01-24T19:56:03Z,2025-01-17T19:56:03Z,0.58,0,46263.06
+pm_519286,polymarket,economics,Trump imposes 25% tariff on Canada and Mexico before March?,2025-01-21T01:44:38Z,2025-02-02T11:38:10Z,2025-01-26T11:38:10Z,0.255,1,922754.72
+pm_519288,polymarket,economics,Will Trump impose tariffs on Mexico before March?,2025-01-21T01:50:57Z,2025-02-02T03:02:39Z,2025-01-26T03:02:39Z,0.73,1,50803.7
+pm_519369,polymarket,crypto,Solana all time high by January 31?,2025-01-21T18:42:34Z,2025-02-01T07:53:03Z,2025-01-25T07:53:03Z,0.235,0,225736.74
+pm_519576,polymarket,economics,"Google Maps renames it ""Gulf of America"" before March?",2025-01-22T02:01:24Z,2025-02-11T00:43:58Z,2025-02-04T00:43:58Z,0.82,1,1094425.32
+pm_519612,polymarket,politics,Will Ross Ulbricht go on Joe Rogan before March?,2025-01-22T17:36:20Z,2025-03-01T07:42:07Z,2025-02-22T07:42:07Z,0.0575,0,54113.08
+pm_519710,polymarket,economics,TikTok on App Store again before March?,2025-01-22T23:25:10Z,2025-02-14T05:05:44Z,2025-02-07T05:05:44Z,0.11,1,112605.05
+pm_519730,polymarket,politics,Will Trump designate cartels as terrorists before March?,2025-01-23T00:10:35Z,2025-02-20T13:32:15Z,2025-02-13T13:32:15Z,0.63,1,76259.22
+pm_519815,polymarket,sports,Scorigami in Super Bowl LIX?,2025-01-23T22:04:04Z,2025-02-10T05:49:30Z,2025-02-03T05:49:30Z,0.055,0,41605.4
+pm_520265,polymarket,economics,DeepSeek V4 released before May?,2025-01-27T00:02:55Z,2025-05-01T10:06:57Z,2025-04-24T10:06:57Z,0.05,0,154722.39
+pm_520266,polymarket,economics,DeepSeek R2 released before May?,2025-01-27T00:08:04Z,2025-05-01T10:22:15Z,2025-04-24T10:22:15Z,0.16,0,179872.21
+pm_520620,polymarket,crypto,Will Dave Portnoy launch a coin before March?,2025-01-28T15:53:27Z,2025-02-17T00:42:47Z,2025-02-10T00:42:47Z,0.125,1,237230.08
+pm_521042,polymarket,economics,Will Trump halt NYC congestion pricing before April?,2025-01-30T20:47:41Z,2025-03-04T18:28:05Z,2025-02-25T18:28:05Z,0.8165,1,29996.17
+pm_521456,polymarket,economics,Will Trump remove tariff on Canada before May?,2025-02-02T18:42:15Z,2025-05-01T08:00:09Z,2025-04-24T08:00:09Z,0.065,0,428394.62
+pm_521474,polymarket,economics,Will the EU impose tariffs on the U.S. before May?,2025-02-02T20:43:56Z,2025-04-14T21:22:00Z,2025-04-07T21:22:00Z,0.735,1,203154.24
+pm_521505,polymarket,culture,Will 'Captain America' Opening Weekend Box Office be >$100m?,2025-02-03T15:31:30Z,2025-02-19T01:05:02Z,2025-02-12T01:05:02Z,0.08,0,144596.84
+pm_521607,polymarket,politics,Ukraine agrees to Trump mineral deal before April?,2025-02-03T20:08:04Z,2025-03-25T00:21:27Z,2025-03-18T00:21:27Z,0.2525,1,7079947.24
+pm_521635,polymarket,politics,Trump tariffs on Canada in effect by May 1?,2025-02-03T23:00:42Z,2025-03-04T08:23:15Z,2025-02-25T08:23:15Z,0.685,1,62519.29
+pm_521839,polymarket,politics,Will Trump cut NPR funding in February?,2025-02-04T22:27:35Z,2025-03-01T08:20:06Z,2025-02-22T08:20:06Z,0.0575,0,11666.49
+pm_522050,polymarket,economics,Bank of England rate cut in March meeting?,2025-02-06T20:26:24Z,2025-03-20T14:27:20Z,2025-03-13T14:27:20Z,0.0515,0,45343.78
+pm_522080,polymarket,crypto,Will Kanye launch a coin in February?,2025-02-07T14:01:01Z,2025-03-01T08:00:23Z,2025-02-22T08:00:23Z,0.67,0,27507326.47
+pm_522217,polymarket,economics,Will Kanye West release an album before July?,2025-02-07T22:41:17Z,2025-03-22T08:47:49Z,2025-03-15T08:47:49Z,0.46,1,410497.53
+pm_522871,polymarket,culture,Will Montoya stay with his girlfriend?,2025-02-11T17:31:12Z,2025-03-06T13:53:29Z,2025-02-27T13:53:29Z,0.54,0,13544.8
+pm_523303,polymarket,politics,Will Kamala Harris announce California Governor run before July?,2025-02-13T15:14:10Z,2025-07-01T08:49:19Z,2025-06-24T08:49:19Z,0.057,0,193070.89
+pm_523341,polymarket,culture,Will Playboi Carti release “I AM MUSIC” by June 1?,2025-02-13T19:15:04Z,2025-03-14T13:53:31Z,2025-03-07T13:53:31Z,0.585,1,352479.49
+pm_523414,polymarket,crypto,Will GameStop purchase Bitcoin by April 1?,2025-02-13T22:32:20Z,2025-04-02T06:45:53Z,2025-03-26T06:45:53Z,0.117,0,468998.33
+pm_523554,polymarket,crypto,Will Trump Media invest in Bitcoin before July?,2025-02-14T21:52:58Z,2025-07-01T07:34:09Z,2025-06-24T07:34:09Z,0.135,0,670893.06
+pm_523555,polymarket,crypto,Will Trump Media invest in Ethereum before July?,2025-02-14T22:02:25Z,2025-07-01T08:49:25Z,2025-06-24T08:49:25Z,0.065,0,343881.47
+pm_523973,polymarket,science_tech,Will Grok remain the #1 model through March 31?,2025-02-18T16:32:18Z,2025-03-04T11:22:20Z,2025-02-25T11:22:20Z,0.245,0,65244.93
+pm_523998,polymarket,culture,Will Pope Francis step down before July?,2025-02-18T19:46:17Z,2025-04-21T10:56:31Z,2025-04-14T10:56:31Z,0.06,0,159450.97
+pm_524028,polymarket,culture,Will 'Nosferatu' win an Oscar?,2025-02-18T20:51:36Z,2025-03-03T07:14:35Z,2025-02-24T07:14:35Z,0.21,0,28558.93
+pm_524145,polymarket,politics,Will Trump meet with Zelenskyy before July?,2025-02-19T19:45:56Z,2025-02-28T20:40:46Z,2025-02-21T20:40:46Z,0.695,1,183568.45
+pm_524448,polymarket,economics,Will Hooters file for bankruptcy before June?,2025-02-21T16:44:53Z,2025-04-01T02:13:01Z,2025-03-25T02:13:01Z,0.305,1,211922.05
+pm_525155,polymarket,crypto,Will Strategy purchase Bitcoin Feb 25-Mar 3?,2025-02-24T22:10:45Z,2025-03-04T07:20:23Z,2025-02-25T07:20:23Z,0.56,0,705194.68
+pm_525158,polymarket,economics,Another commercial airline evacuation before March?,2025-02-24T23:09:40Z,2025-03-05T04:21:33Z,2025-02-26T04:21:33Z,0.2685,0,480465.94
+pm_525170,polymarket,crypto,Will Kanye launch a coin by March 7?,2025-02-25T02:46:51Z,2025-03-08T07:18:11Z,2025-03-01T07:18:11Z,0.105,0,414702.3
+pm_525525,polymarket,science_tech,300+ Measles cases in U.S. before April?,2025-02-26T22:01:25Z,2025-03-14T19:28:05Z,2025-03-07T19:28:05Z,0.66,1,139224.29
+pm_526287,polymarket,politics,Will Trump issue an executive order on March 5?,2025-02-28T21:21:03Z,2025-03-09T06:14:12Z,2025-03-02T06:14:12Z,0.405,0,52367.47
+pm_526628,polymarket,crypto,Will Strategy purchase Bitcoin Feb Mar 4-10?,2025-03-03T19:00:41Z,2025-03-11T06:16:45Z,2025-03-04T06:16:45Z,0.455,0,462798.19
+pm_526837,polymarket,economics,Negative GDP growth in Q1 2025?,2025-03-04T17:14:01Z,2025-04-30T16:05:44Z,2025-04-23T16:05:44Z,0.255,1,679820.85
+pm_526842,polymarket,economics,Will Fed end QT before May?,2025-03-04T18:18:56Z,2025-03-17T00:23:49Z,2025-03-10T00:23:49Z,0.445,1,6253067.83
+pm_527280,polymarket,science_tech,500+ Measles cases in U.S. before April?,2025-03-07T20:26:04Z,2025-03-29T06:46:04Z,2025-03-22T06:46:04Z,0.07,0,361325.28
+pm_527827,polymarket,crypto,Ethereum all time high before 2026?,2025-03-11T21:59:42Z,2025-08-22T23:07:40Z,2025-08-15T23:07:40Z,0.8425,1,1320759.3
+pm_528244,polymarket,politics,CNN/MSNBC sued for libel against Trump?,2025-03-14T21:32:52Z,2025-07-01T06:08:57Z,2025-06-24T06:08:57Z,0.0675,0,127932.43
+pm_528610,polymarket,culture,Tom Cruise and Ana de Armas confirmed relationship by April?,2025-03-17T16:25:10Z,2025-05-01T07:55:01Z,2025-04-24T07:55:01Z,0.0935,0,58076.21
+pm_528647,polymarket,culture,"Playboi Carti's ""MUSIC"" debuts at #1 on Billboard 200?",2025-03-17T18:47:38Z,2025-03-25T12:17:00Z,2025-03-18T12:17:00Z,0.94,1,36878.35
+pm_529046,polymarket,sports,Will Barcelona win the treble?,2025-03-19T22:49:33Z,2025-05-07T01:02:16Z,2025-04-30T01:02:16Z,0.29,0,231939.9
+pm_529663,polymarket,crypto,Will Coinbase acquire Deribit?,2025-03-21T21:38:31Z,2025-05-09T03:26:42Z,2025-05-02T03:26:42Z,0.59,1,316002.55
+pm_532741,polymarket,politics,US military action against Iran before July?,2025-03-31T16:44:47Z,2025-06-22T03:03:06Z,2025-06-15T03:03:06Z,0.433,1,29917021.25
+pm_532756,polymarket,crypto,Will MicroStrategy purchase Bitcoin April 1-7?,2025-03-31T17:09:37Z,2025-04-08T09:17:57Z,2025-04-01T09:17:57Z,0.78,0,777803.43
+pm_532852,polymarket,crypto,XRP Up or Down in April?,2025-03-31T20:46:56Z,2025-05-01T08:35:11Z,2025-04-24T08:35:11Z,0.6,1,57042.95
+pm_532896,polymarket,weather,Earthquake 7.0 or above in April?,2025-03-31T22:02:17Z,2025-05-01T08:50:47Z,2025-04-24T08:50:47Z,0.225,0,34129.43
+pm_532897,polymarket,politics,Trump x Ukraine mineral deal signed before May?,2025-03-31T22:39:04Z,2025-05-04T01:10:41Z,2025-04-27T01:10:41Z,0.14,1,6833523.78
+pm_532899,polymarket,politics,Will Black Sea ceasefire go into effect before May?,2025-03-31T23:03:55Z,2025-05-01T07:44:49Z,2025-04-24T07:44:49Z,0.075,0,62222.07
+pm_532919,polymarket,politics,Trump approval >45% on May 1?,2025-03-31T23:32:37Z,2025-05-03T04:12:08Z,2025-04-26T04:12:08Z,0.055,0,206594.5
+pm_533744,polymarket,economics,Will Trump lower tariffs on China in April?,2025-04-03T00:30:45Z,2025-04-16T08:19:34Z,2025-04-09T08:19:34Z,0.395,1,11020745.16
+pm_535291,polymarket,economics,US-China trade deal before June?,2025-04-08T14:50:07Z,2025-05-12T10:56:54Z,2025-05-05T10:56:54Z,0.2,1,3453588.24
+pm_537674,polymarket,economics,Will OpenAI acquire Windsurf before August?,2025-04-16T18:45:01Z,2025-05-08T10:11:43Z,2025-05-01T10:11:43Z,0.395,1,338242.99
+pm_537693,polymarket,economics,Trump trade deal before June?,2025-04-16T21:05:28Z,2025-05-09T03:21:48Z,2025-05-02T03:21:48Z,0.8475,1,169750.02
+pm_538112,polymarket,sports,Will a NBA play-in team win a first round series?,2025-04-18T09:43:06Z,2025-05-05T06:59:40Z,2025-04-28T06:59:40Z,0.765,1,79068.05
+pm_539980,polymarket,politics,Record low border encounters in April?,2025-04-28T16:24:05Z,2025-05-12T19:25:12Z,2025-05-05T19:25:12Z,0.185,0,103509.76
+pm_540015,polymarket,politics,Trump meets with Carney before June?,2025-04-29T03:19:52Z,2025-05-06T19:35:50Z,2025-04-29T19:35:50Z,0.335,1,118722.81
+pm_540156,polymarket,crypto,Celsius founder sentenced to 20+ years?,2025-04-29T16:17:36Z,2025-05-09T05:19:22Z,2025-05-02T05:19:22Z,0.16,0,84921.72
+pm_540466,polymarket,crypto,Bitcoin all time high in May?,2025-04-30T19:17:21Z,2025-05-21T20:30:38Z,2025-05-14T20:30:38Z,0.48,1,754566.05
+pm_540733,polymarket,culture,Will John Mulaney actually fight children?,2025-05-01T20:31:46Z,2025-05-29T05:22:29Z,2025-05-22T05:22:29Z,0.7645,1,137153.65
+pm_541647,polymarket,politics,Israel x Hamas ceasefire before 2026?,2025-05-05T21:23:14Z,2025-10-09T02:02:34Z,2025-10-02T02:02:34Z,0.466,1,3556471.14
+pm_542366,polymarket,sports,Will Scottie Scheffler win a Major in 2025?,2025-05-07T15:51:19Z,2025-05-19T03:21:03Z,2025-05-12T03:21:03Z,0.405,1,131012.29
+pm_542490,polymarket,sports,Champions League Final: 3+ goals?,2025-05-07T17:28:24Z,2025-05-31T23:03:30Z,2025-05-24T23:03:30Z,0.545,1,587930.79
+pm_542532,polymarket,culture,Will the Black Woman statue be removed from Times Square early?,2025-05-07T20:22:13Z,2025-06-15T05:15:20Z,2025-06-08T05:15:20Z,0.8615,1,139446.82
+pm_547239,polymarket,crypto,Will MicroStrategy purchase Bitcoin May 27-June 2?,2025-05-26T08:52:44Z,2025-06-02T14:05:57Z,2025-05-26T14:05:57Z,0.815,1,680724.29
+pm_548006,polymarket,politics,Will Russia capture Yablunivka before July?,2025-05-28T19:27:00Z,2025-07-01T07:34:11Z,2025-06-24T07:34:11Z,0.24,0,255684.02
+pm_548296,polymarket,science_tech,Will Tesla launch a driverless Robotaxi service before July?,2025-05-29T19:59:35Z,2025-07-05T00:27:12Z,2025-06-28T00:27:12Z,0.08,0,11890598.37
+pm_548325,polymarket,politics,Will Russia capture Yunakivka before July?,2025-05-29T21:36:07Z,2025-07-01T07:19:15Z,2025-06-24T07:19:15Z,0.25,0,368993.23
+pm_549324,polymarket,science_tech,Will Tesla launch a driverless Robotaxi service in 2025?,2025-06-02T20:37:14Z,2025-09-11T00:29:19Z,2025-09-04T00:29:19Z,0.39,1,1300685.81
+pm_549761,polymarket,crypto,Bitcoin all time high before July?,2025-06-04T12:02:10Z,2025-07-01T06:13:53Z,2025-06-24T06:13:53Z,0.235,0,605166.54
+pm_552876,polymarket,crypto,MicroStrategy purchases >8000 BTC June 17-23?,2025-06-16T15:07:33Z,2025-06-24T07:34:29Z,2025-06-17T07:34:29Z,0.075,0,107875.69
+pm_552974,polymarket,sports,Will Joey Chestnut win Nathan's Famous Hot Dog 2025?,2025-06-16T16:19:25Z,2025-07-04T19:45:39Z,2025-06-27T19:45:39Z,0.91,1,107750.76
+pm_552975,polymarket,sports,Will Joey Chestnut eat 70+ Hot Dogs?,2025-06-16T16:33:20Z,2025-07-04T19:45:39Z,2025-06-27T19:45:39Z,0.695,1,244276.51
+pm_553352,polymarket,politics,Will Israel's Ben Gurion Airport reopen before July?,2025-06-17T17:51:34Z,2025-06-26T07:28:51Z,2025-06-19T07:28:51Z,0.585,1,217115.23
+pm_554584,polymarket,other,Will Russia capture Yablunivka before August?,2025-06-20T23:21:39Z,2025-07-25T01:18:12Z,2025-07-18T01:18:12Z,0.435,1,285963.56
+pm_554707,polymarket,politics,Another US military action against Iran by June 30?,2025-06-22T00:49:49Z,2025-07-01T07:38:57Z,2025-06-24T07:38:57Z,0.051,0,997664.02
+pm_555384,polymarket,politics,Will Russia capture Udachne before August?,2025-06-24T15:49:16Z,2025-08-01T06:19:38Z,2025-07-25T06:19:38Z,0.145,0,175383.85
+pm_555459,polymarket,politics,Yoon in jail before August?,2025-06-24T22:11:16Z,2025-07-10T02:22:15Z,2025-07-03T02:22:15Z,0.6,1,1268192.78
+pm_556644,polymarket,politics,Yoon arrested before September?,2025-06-27T20:37:44Z,2025-07-09T17:11:03Z,2025-07-02T17:11:03Z,0.69,1,251469.27
+pm_557759,polymarket,crypto,Will MicroStrategy purchase Bitcoin July 1-7?,2025-06-30T12:47:58Z,2025-07-08T06:00:35Z,2025-07-01T06:00:35Z,0.855,0,2461790.07
+pm_557761,polymarket,crypto,Bitcoin all time high before August?,2025-06-30T12:57:41Z,2025-07-09T21:58:16Z,2025-07-02T21:58:16Z,0.775,1,266652.49
+pm_557849,polymarket,science_tech,Will OpenAI release an open source model before September?,2025-06-30T15:53:44Z,2025-08-05T19:47:37Z,2025-07-29T19:47:37Z,0.6975,1,256458.62
+pm_562704,polymarket,politics,Dan Bongino out as Deputy Director of the FBI by July 31?,2025-07-11T16:19:20Z,2025-08-01T06:17:36Z,2025-07-25T06:17:36Z,0.05,0,194823.88
+pm_563083,polymarket,culture,Will TIME's Person of the Year for 2025 be a woman?,2025-07-13T16:42:01Z,2025-12-11T14:59:03Z,2025-12-04T14:59:03Z,0.0565,0,1484874.58
+pm_565680,polymarket,sports,Will Trump attend UFC 319?,2025-07-20T18:41:20Z,2025-08-17T07:48:34Z,2025-08-10T07:48:34Z,0.205,0,382909.53
+pm_565922,polymarket,crypto,MicroStrategy purchases >5000 BTC July 22-28?,2025-07-21T10:31:27Z,2025-07-29T06:00:49Z,2025-07-22T06:00:49Z,0.515,0,344865.13
+pm_566087,polymarket,weather,Earthquake 7.0 or above by July 31?,2025-07-21T18:18:41Z,2025-07-30T04:45:55Z,2025-07-23T04:45:55Z,0.24,1,180848.47
+pm_567264,polymarket,crypto,Will MicroStrategy hold 630k+ BTC by August 31?,2025-07-23T19:06:25Z,2025-08-25T14:03:13Z,2025-08-18T14:03:13Z,0.499,1,361788.65
+pm_567582,polymarket,sports,Will Trump attend Hulk Hogan's funeral?,2025-07-24T21:41:00Z,2025-08-08T06:00:37Z,2025-08-01T06:00:37Z,0.235,0,141559.76
+pm_570342,polymarket,culture,Katy Perry and Justin Trudeau confirmed relationship by October 31?,2025-07-31T17:02:29Z,2025-11-04T00:32:01Z,2025-10-28T00:32:01Z,0.1445,0,6152916.31
+pm_574577,polymarket,culture,Will another MrBeast video get 55m+ day 1 views by September 30?,2025-08-08T20:12:15Z,2025-10-01T06:12:47Z,2025-09-24T06:12:47Z,0.055,0,370177.35
+pm_574970,polymarket,crypto,Ethereum all time high by August 31?,2025-08-11T13:44:12Z,2025-08-22T23:05:34Z,2025-08-15T23:05:34Z,0.52,1,184847.61
+pm_575171,polymarket,science_tech,Will Tesla launch a driverless Robotaxi service by October 31?,2025-08-12T16:00:48Z,2025-09-11T00:28:31Z,2025-09-04T00:28:31Z,0.23,1,6604477.87
+pm_575710,polymarket,crypto,Ethereum all time high by August 22?,2025-08-13T16:58:58Z,2025-08-22T23:06:38Z,2025-08-15T23:06:38Z,0.35,1,242858.96
+pm_578155,polymarket,science_tech,OpenAI browser by September 30?,2025-08-18T21:53:31Z,2025-10-01T06:02:03Z,2025-09-24T06:02:03Z,0.06,0,317013.03
+pm_580810,polymarket,crypto,Will MicroStrategy purchase Bitcoin August 26-September 1?,2025-08-25T13:24:54Z,2025-09-05T00:29:32Z,2025-08-29T00:29:32Z,0.34,0,4487549.81
+pm_580840,polymarket,politics,Will Trump impose more sanctions on Russia by September 30?,2025-08-25T13:53:15Z,2025-09-19T00:44:52Z,2025-09-12T00:44:52Z,0.29,1,8030505.61
+pm_581648,polymarket,politics,North Korea missile test by September 15?,2025-08-26T17:41:53Z,2025-09-16T06:00:34Z,2025-09-09T06:00:34Z,0.215,0,173219.98
+pm_582457,polymarket,science_tech,OpenAI browser by October 31?,2025-08-27T21:13:46Z,2025-10-21T19:34:53Z,2025-10-14T19:34:53Z,0.385,1,5507335.1
+pm_583542,polymarket,politics,Israel strike on Yemen by September 5?,2025-08-29T16:03:26Z,2025-09-06T06:10:44Z,2025-08-30T06:10:44Z,0.35,0,198969.69
+pm_585592,polymarket,economics,US government shutdown by October 1?,2025-09-01T23:17:53Z,2025-10-01T06:31:43Z,2025-09-24T06:31:43Z,0.675,1,13491651.79
+pm_585954,polymarket,culture,Will Kai Cenat hit 1m Twitch subscribers during MAFIATHON 3?,2025-09-02T14:34:40Z,2025-09-28T07:52:29Z,2025-09-21T07:52:29Z,0.83,1,549284.52
+pm_586052,polymarket,culture,"""Demon Slayer"" grosses higher than ""The Conjuring"" opening weekend?",2025-09-02T16:08:08Z,2025-09-15T21:21:00Z,2025-09-08T21:21:00Z,0.08,0,613052.69
+pm_586140,polymarket,politics,Israel strike on Yemen by September 15?,2025-09-02T20:43:02Z,2025-09-10T16:33:39Z,2025-09-03T16:33:39Z,0.645,1,205099.51
+pm_588680,polymarket,science_tech,Will Apple's iPhone 17 Pro cost more than $1000 when it launches?,2025-09-05T13:14:34Z,2025-09-13T12:23:43Z,2025-09-06T12:23:43Z,0.915,1,294697.1
+pm_614615,polymarket,economics,Will Tesla (TSLA) beat quarterly earnings?,2025-09-26T18:28:08Z,2025-10-22T23:44:57Z,2025-10-15T23:44:57Z,0.715,0,726860.84
+pm_627795,polymarket,economics,Will DraftKings launch a prediction market in 2025?,2025-10-08T20:27:44Z,2025-12-19T15:20:04Z,2025-12-12T15:20:04Z,0.715,1,2159776.36
+pm_631492,polymarket,economics,100% tariff on China in effect by November 1?,2025-10-11T01:35:50Z,2025-11-02T06:33:57Z,2025-10-26T06:33:57Z,0.0555,0,1464605.05
+pm_632494,polymarket,crypto,Will Zcash flip Monero by December 31?,2025-10-12T14:19:57Z,2025-11-02T02:30:14Z,2025-10-26T02:30:14Z,0.465,1,2298059.02
+pm_642841,polymarket,crypto,Will Stable launch a token in 2025?,2025-10-21T18:33:33Z,2025-12-08T20:53:47Z,2025-12-01T20:53:47Z,0.905,1,8477043.9
+pm_644988,polymarket,economics,Will Elon Musk’s $1T Tesla pay deal pass?,2025-10-22T19:55:32Z,2025-11-07T01:54:35Z,2025-10-31T01:54:35Z,0.935,1,900079.93
+pm_645986,polymarket,politics,U.S. anti-cartel strike/operation on foreign soil by December 31?,2025-10-22T22:50:33Z,2026-01-03T00:31:01Z,2025-12-27T00:31:01Z,0.0645,1,6161817.7
+pm_658923,polymarket,crypto,Will MicroStrategy announce holding 650k+ BTC by November 30?,2025-10-31T22:45:26Z,2025-12-01T07:21:46Z,2025-11-24T07:21:46Z,0.085,0,2389013.24
+pm_667625,polymarket,sports,Will Trump win FIFA Peace Prize?,2025-11-06T13:56:04Z,2025-12-05T19:49:39Z,2025-11-28T19:49:39Z,0.939,1,652801.72
+pm_675504,polymarket,economics,Will NVIDIA (NVDA) beat quarterly earnings?,2025-11-10T22:35:24Z,2025-11-19T23:23:45Z,2025-11-12T23:23:45Z,0.925,1,995129.93
+pm_678296,polymarket,culture,Will the Gävle Goat burn in 2025?,2025-11-12T15:26:22Z,2026-01-01T01:10:35Z,2025-12-25T01:10:35Z,0.1,0,1894099.35
+pm_784181,polymarket,crypto,MicroStrategy announces >1000 BTC purchase December 2-8?,2025-12-01T05:35:00Z,2025-12-08T15:05:55Z,2025-12-01T15:05:55Z,0.375,1,4156296.01
+pm_839968,polymarket,culture,Will Spotify's top song on Christmas be 'All I Want For Christmas Is You'?,2025-12-05T23:06:57Z,2025-12-25T20:59:03Z,2025-12-18T20:59:03Z,0.9195,1,1387397.59
+pm_916732,polymarket,politics,Khamenei out as Supreme Leader of Iran by March 31?,2025-12-11T22:53:01Z,2026-03-04T00:58:01Z,2026-02-25T00:58:01Z,0.205,1,63238697.72
+pm_939293,polymarket,crypto,Will Microstrategy announce a Bitcoin purchase December 16-22?,2025-12-15T05:30:00Z,2025-12-23T07:11:35Z,2025-12-16T07:11:35Z,0.805,0,495380.99
+pm_957019,polymarket,politics,US-Iran nuclear deal by June 30?,2025-12-17T20:59:21Z,2026-06-15T04:49:27Z,2026-06-08T04:49:27Z,0.215,1,11324069.04
+pm_995291,polymarket,sports,Will Alex Honnold free solo Taipei 101?,2025-12-22T17:51:58Z,2026-01-25T05:31:30Z,2026-01-18T05:31:30Z,0.915,1,1925800.86
