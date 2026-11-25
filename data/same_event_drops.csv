@@ -1,0 +1,15 @@
+market_id,kept_market_id,reason
+ks_KXSPOTIFYALBUMRELEASEDATEKANYE-DAY,ks_KXSPOTIFYALBUMRELEASEDATEKANYE-MAR28-26,same event (Kanye BULLY release) with an earlier deadline
+ks_KXSPOTIFYALBUMRELEASEDATEKANYE-25DEC13,ks_KXSPOTIFYALBUMRELEASEDATEKANYE-MAR28-26,same event (Kanye BULLY release) with an earlier deadline
+ks_KXSPOTIFYALBUMRELEASEDATEKANYE-26JAN31,ks_KXSPOTIFYALBUMRELEASEDATEKANYE-MAR28-26,same event (Kanye BULLY release) with an earlier deadline
+pm_575171,pm_548296,same event (Tesla driverless Robotaxi launch) with a later deadline
+pm_549324,pm_548296,same event (Tesla driverless Robotaxi launch) with a later deadline
+pm_549761,pm_540466,same event (Bitcoin all-time high) with an overlapping window
+pm_557761,pm_540466,same event (Bitcoin all-time high) with an overlapping window
+pm_574970,pm_527827,same event (Ethereum all-time high) with an earlier deadline
+pm_575710,pm_527827,same event (Ethereum all-time high) with an earlier deadline
+pm_548006,pm_554584,same event (Russia captures Yablunivka) with an earlier deadline
+pm_583542,pm_586140,same event (Israel strike on Yemen) with an earlier deadline
+pm_525525,pm_527280,same event (US measles cases before April) with a lower threshold
+ks_KXMRBEAST100M-25AUG31,ks_KXMRBEAST100M-25AUG30,same event (MrBeast video 100M views in a week) with an overlapping window
+ks_KXWCAWARDCOMBO-26KMBAPP10-YES,ks_KXWCAWARDCOMBO-26LMESSI10-YES,same event (2026 World Cup Golden Boot and Golden Ball winner); outcomes mutually exclusive
