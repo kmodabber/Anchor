@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import csv
 from dataclasses import dataclass
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 from typing import Iterable, Optional
 
@@ -37,8 +38,13 @@ class Market:
 
     @property
     def price_points(self) -> int:
-        """Price as a whole percentage, the form shown in prompts."""
-        return int(round(self.snapshot_price * 100))
+        """Price as a whole percentage, the form shown in prompts, rounded half
+        up (0.375 -> 38, 0.385 -> 39). Built-in round() would round halves to
+        the nearest even number, and 0.065 * 100 is a hair under 6.5 in floating
+        point, so half of the half-point prices would go the other way.
+        repr() gives the price exactly as written in the CSV."""
+        pts = Decimal(repr(self.snapshot_price)) * 100
+        return int(pts.quantize(Decimal(1), rounding=ROUND_HALF_UP))
 
 
 def load_markets(csv_path: Path | str) -> list[Market]:

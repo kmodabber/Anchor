@@ -16,12 +16,12 @@ import json
 import platform
 import subprocess
 import sys
-import time
 from dataclasses import dataclass
 from pathlib import Path
 
 from common.config import REPO_ROOT, config_hash
 from .model_client import ModelClient
+from .runner import now_iso
 
 PINNED_VERSION_PHASES = ("main", "paraphrase")
 
@@ -117,7 +117,7 @@ def gpu_info() -> str:
 def write_manifest(path: Path, pf: PreflightResult, **run_info) -> None:
     """Append one JSON line describing this run invocation."""
     record = {
-        "started": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+        "started": now_iso(),
         **run_info,
         "commit": pf.commit,
         "config_hash": pf.config_hash,

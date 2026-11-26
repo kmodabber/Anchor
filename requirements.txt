@@ -1,9 +1,8 @@
-# Python 3.11+. Record exact versions in the README before the main run:
-#   pip freeze > results/pip-freeze.txt
-pyyaml>=6.0
-numpy>=1.26
-pandas>=2.1
-requests>=2.31
-ollama>=0.3
-matplotlib>=3.8
-pytest>=8.0
+# Python 3.11+. Exact versions so both run machines install the same libraries.
+# The pipeline itself needs only PyYAML (it talks to Ollama over HTTP with the
+# standard library); numpy, pandas and matplotlib are for eval/ and figures.
+PyYAML==6.0.4
+numpy==2.5.5
+pandas==3.1.1
+matplotlib==3.11.2
+pytest==9.2.0

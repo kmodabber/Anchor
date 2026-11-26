@@ -103,3 +103,20 @@ def test_percent_prices_rejected(tmp_path, cfg):
     bad.write_text(src.replace(",0.72,", ",72,"), encoding="utf-8")
     with pytest.raises(ValueError, match="not a probability"):
         load_markets(bad)
+
+
+@pytest.mark.parametrize("price, shown", [
+    (0.375, 38), (0.385, 39),   # built-in round() gave 38 for both
+    (0.055, 6), (0.065, 7),     # 0.065 * 100 is just under 6.5 in floating point
+    (0.8425, 84), (0.05, 5), (0.95, 95), (0.72, 72),
+])
+def test_shown_price_rounds_half_up(price, shown):
+    from pipeline.markets import Market
+    m = Market("x", "s", "c", "q", "", "", "", price, 0.0)
+    assert m.price_points == shown
+
+
+def test_timestamps_have_a_numeric_utc_offset(cfg, markets, tmp_path):
+    import re
+    r = _run(cfg, markets[:1], tmp_path, runs=1)[0]
+    assert re.fullmatch(r"\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d[+-]\d\d:\d\d", r["timestamp"])
