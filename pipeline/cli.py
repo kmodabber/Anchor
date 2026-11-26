@@ -75,7 +75,8 @@ def _print_summary(stats: dict[str, RunStats], max_rate: float) -> None:
         if s.failed_examples:
             print("  failed examples:")
             for ex in s.failed_examples:
-                print(f"    - {ex!r}")
+                # ascii(): a curly quote in a response must not crash a Windows log
+                print(f"    - {ascii(ex)}")
         if s.failure_rate() > max_rate:
             print(f"  WARNING: {model} exceeds the {max_rate:.0%} parse failure cutoff.")
         overall_fail += s.parse_failures

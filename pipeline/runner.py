@@ -16,6 +16,7 @@ import json
 import shutil
 import time
 from dataclasses import dataclass, field
+from datetime import datetime
 from pathlib import Path
 from typing import Callable, Iterable
 
@@ -25,6 +26,12 @@ from .markets import Market
 from .model_client import ModelClient
 from .parser import parse_probability
 from .prompts import CONDITIONS, render
+
+
+def now_iso() -> str:
+    """Local time with UTC offset, e.g. 2026-11-26T21:04:05-05:00, on every OS.
+    (time.strftime('%z') can give a time zone *name* on Windows.)"""
+    return datetime.now().astimezone().isoformat(timespec="seconds")
 
 
 @dataclass
@@ -190,7 +197,7 @@ def run_pipeline(
                         "retry_count": retries,
                         "final_status": final_status,
                         "elapsed_s": round(elapsed, 4),
-                        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S%z"),
+                        "timestamp": now_iso(),
                     })
 
             if progress and (i % progress_every == 0 or i == len(markets)):
