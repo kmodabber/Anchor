@@ -49,7 +49,9 @@ python -m scripts.make_decoys                                   # needs data/mar
 python -m pipeline.cli parser-test --n 10 --fixture --dry-run   # fake model, no Ollama
 python -m pipeline.cli parser-test --n 10                       # real models, dev markets only
 python -m pipeline.cli parser-test --models qwen2.5:3b qwen2.5:7b   # one machine's models
-# eval commands: to be added by Aryan
+python -m eval.evaluate --markets data/markets.csv --decoys data/decoys.csv \
+    --responses results/raw/main --split data/split.csv --subset dev --out results/eval_dev
+# final, once prompts are frozen: --subset test --out results/eval_test (details: eval/README.md, PROTOCOL.md)
 ```
 
 ### Experiment runs (week 11)
